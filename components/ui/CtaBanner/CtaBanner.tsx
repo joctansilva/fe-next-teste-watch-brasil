@@ -23,24 +23,24 @@ export function CtaBanner({
   return (
     <div
       className={cn(
-        "relative w-full aspect-[1328/400] overflow-hidden rounded-lg bg-white",
-        className
+        "relative w-full aspect-1328/400 overflow-hidden bg-white",
+        className,
       )}
     >
-      <div className="relative h-full w-full p-8 pb-16">
+      <div className="relative h-full w-full">
         {slides.map((slide, index) => (
           <div
             key={index}
             className={cn(
-              "absolute inset-8 bottom-16 transition-opacity duration-500",
-              currentSlide === index ? "opacity-100" : "opacity-0"
+              "absolute inset-8 lg:bottom-10 md:bottom-0 transition-opacity duration-500",
+              currentSlide === index ? "opacity-100" : "opacity-0",
             )}
           >
             <Image
               src={slide.image}
               alt={slide.alt}
               fill
-              className="object-contain"
+              className="object-cover object-center"
               sizes="(max-width: 1920px) 100vw, 1920px"
               priority={index === 0}
             />
@@ -52,11 +52,11 @@ export function CtaBanner({
         <button
           key={`btn-${index}`}
           className={cn(
-            "absolute right-12 bottom-18 rounded px-8 py-1.5 font-extrabold text-lg text-white transition-opacity duration-500 flex flex-row gap-2.5 items-center mb-8 mr-8 cursor-pointer",
+            "absolute right-[48px] bottom-[64px] rounded px-8 py-1.5 font-extrabold text-lg text-white transition-opacity duration-500 flex flex-row gap-2.5 items-center cursor-pointer",
             "hover:opacity-90",
             currentSlide === index
               ? "opacity-100"
-              : "opacity-0 pointer-events-none"
+              : "opacity-0 pointer-events-none",
           )}
           style={{ backgroundColor: slide.buttonColor }}
         >
@@ -66,7 +66,7 @@ export function CtaBanner({
       ))}
 
       {showPagination && (
-        <div className="absolute bottom-0 left-0 right-0 flex h-[8%] items-center justify-center bg-white">
+        <div className="absolute bottom-0 left-0 right-0 flex h-[8%] items-center justify-center ">
           <Pagination
             totalSlides={slides.length}
             currentSlide={currentSlide}

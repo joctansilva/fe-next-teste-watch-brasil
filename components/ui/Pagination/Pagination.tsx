@@ -19,7 +19,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
               "rounded-full transition-all",
               currentSlide === index
                 ? "bg-primary opacity-100 w-3 h-3"
-                : "bg-primary opacity-40 hover:opacity-60 w-2 h-2"
+                : "bg-primary opacity-40 hover:opacity-60 w-2 h-2",
             )}
             aria-label={`Ir para slide ${index + 1}`}
             aria-current={currentSlide === index ? "true" : "false"}
@@ -27,7 +27,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
         ))}
       </div>
     );
-  }
+  },
 );
 
 Pagination.displayName = "Pagination";
