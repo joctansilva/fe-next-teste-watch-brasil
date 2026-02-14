@@ -4,7 +4,7 @@ import { cva } from "class-variance-authority";
  * LiveCard Variants
  */
 export const liveCardVariants = cva(
-  "relative overflow-hidden select-none hover:ring-2 hover:ring-primary transition-all cursor-pointer isolate",
+  "relative overflow-hidden select-none md:hover:ring-2 md:hover:ring-primary transition-all cursor-pointer isolate",
   {
     variants: {
       /**
@@ -21,8 +21,8 @@ export const liveCardVariants = cva(
        * @default default
        */
       size: {
-        default: "h-[288px] w-[440px]",
-        small: "h-[216px] w-[330px]",
+        default: "h-[154px] w-[220px] md:h-[288px] md:w-[440px]",
+        small: "h-[154px] w-[220px] md:h-[216px] md:w-[330px]",
       },
     },
 

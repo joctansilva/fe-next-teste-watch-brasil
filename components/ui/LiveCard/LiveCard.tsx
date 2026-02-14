@@ -33,7 +33,7 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
         )}
         {...props}
       >
-        <div className="group/card relative h-[208px] w-full">
+        <div className="group/card relative h-28 w-full md:h-52">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${image})` }}
@@ -41,7 +41,19 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
             aria-label={alt || artistName}
           />
 
-          <div className="absolute inset-x-0 bottom-0 h-32 opacity-0 transition-opacity duration-300 group-hover/card:opacity-100">
+          {/* Age-rate sempre visível em mobile */}
+          <div className="absolute bottom-2 left-2 md:hidden">
+            <Image
+              src="/age-rate.png"
+              alt="Classificação etária"
+              width={16}
+              height={16}
+              className="shrink-0"
+            />
+          </div>
+
+          {/* Overlay de hover apenas em desktop */}
+          <div className="absolute inset-x-0 bottom-0 h-32 opacity-0 transition-opacity duration-300 md:group-hover/card:opacity-100">
             <div
               className="absolute inset-0"
               style={{
@@ -80,20 +92,22 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
           </div>
         </div>
 
-        <div className="flex h-20 items-start justify-between bg-tertiary px-4 py-3">
-          <div className="flex flex-col gap-6">
-            <Text variant="nano" className="text-primary ">
+        <div className="flex h-10.5 items-start justify-between bg-tertiary px-2 py-1 md:px-4 md:py-3 md:h-20">
+          <div className="flex flex-col gap-1 md:gap-6">
+            <Text variant="nano" className="text-primary">
               {artistName}
             </Text>
-            <Text variant="nano" className="text-white/80">
+            <Text variant="small" className="text-white/60 md:hidden">
+              {dateTime}
+            </Text>
+            <Text variant="nano" className="text-white/80 hidden md:flex">
               {stageName}
             </Text>
           </div>
-
-          <div className="flex flex-col items-end gap-6">
+          <div className="flex flex-col items-end gap-1 md:gap-6">
             {isLive && <LiveTag />}
 
-            <Text variant="small" className="text-white/60">
+            <Text variant="small" className="text-white/60 hidden md:flex">
               {dateTime}
             </Text>
           </div>
