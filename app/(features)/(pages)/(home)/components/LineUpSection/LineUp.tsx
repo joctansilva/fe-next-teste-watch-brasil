@@ -1,5 +1,3 @@
-"use client";
-
 import { Text, Card, CardAds, Carousel } from "@/components/ui";
 
 import { shows } from "@/data/shows";
@@ -9,7 +7,6 @@ import { isAd } from "@/lib/typeGuards";
 import { getBadgeIcon, getButtonIcon } from "@/lib/getAdIcon";
 
 export function LineUp() {
-  // Mostra o primeiro anúncio (Nike) após 3 shows
   const lineupItems = useInterleaveAds(shows, ads[1], 4);
 
   return (

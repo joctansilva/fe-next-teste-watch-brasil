@@ -1,5 +1,3 @@
-"use client";
-
 import { Text, CardAds, Button, GenreCard, Carousel } from "@/components/ui";
 
 import { ads } from "@/data/ads";

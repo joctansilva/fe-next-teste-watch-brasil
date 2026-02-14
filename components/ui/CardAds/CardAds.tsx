@@ -1,27 +1,9 @@
-import { forwardRef, HTMLAttributes, ReactNode } from "react";
+import { forwardRef } from "react";
 import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 import { Badge, Button } from "@/components/ui";
-
-export interface CardAdsProps extends HTMLAttributes<HTMLDivElement> {
-  image: string;
-  alt: string;
-  badgeText: string;
-  badgeIcon?: ReactNode;
-  buttonText: string;
-  buttonIcon?: ReactNode;
-  buttonClassName?: string;
-  onButtonClick?: () => void;
-  logo?: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-    className?: string;
-  };
-  priority?: boolean;
-}
+import type { CardAdsProps } from "./CardAds.types";
 
 export const CardAds = forwardRef<HTMLDivElement, CardAdsProps>(
   (
@@ -39,18 +21,17 @@ export const CardAds = forwardRef<HTMLDivElement, CardAdsProps>(
       className,
       ...props
     },
-    ref,
+    ref
   ) => {
     return (
       <div
         ref={ref}
         className={cn(
           "relative h-full w-110 overflow-hidden rounded-lg hover:ring-2 hover:ring-primary",
-          className,
+          className
         )}
         {...props}
       >
-        {/* Background Image */}
         <Image
           src={image}
           alt={alt}
@@ -60,10 +41,8 @@ export const CardAds = forwardRef<HTMLDivElement, CardAdsProps>(
           sizes="440px"
         />
 
-        {/* Content */}
         <div className="relative z-10 flex h-full flex-col">
           <div className="flex items-start justify-between">
-            {/* Logo */}
             {logo && (
               <div className="shrink-0 ml-6 mt-4">
                 <Image
@@ -76,7 +55,6 @@ export const CardAds = forwardRef<HTMLDivElement, CardAdsProps>(
               </div>
             )}
 
-            {/* Badge no canto superior direito */}
             <Badge
               variant="primary"
               size="md"
@@ -87,7 +65,6 @@ export const CardAds = forwardRef<HTMLDivElement, CardAdsProps>(
             </Badge>
           </div>
 
-          {/* Main Content - dividido em 2 colunas */}
           <div className="mt-auto grid grid-cols-2">
             <div />
             <div className="flex flex-col items-center justify-center mb-5">
@@ -107,7 +84,7 @@ export const CardAds = forwardRef<HTMLDivElement, CardAdsProps>(
         </div>
       </div>
     );
-  },
+  }
 );
 
 CardAds.displayName = "CardAds";

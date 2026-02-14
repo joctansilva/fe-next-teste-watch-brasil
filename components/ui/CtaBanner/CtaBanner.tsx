@@ -1,17 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
-import type { BannerSlide } from "@/data/banners";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-export interface CtaBannerProps {
-  slides: BannerSlide[];
-  autoPlay?: boolean;
-  autoPlayInterval?: number;
-  className?: string;
-}
+import { cn } from "@/lib/utils";
+import { useCtaBanner } from "./useCtaBanner";
+import type { CtaBannerProps } from "./CtaBanner.types";
 
 export function CtaBanner({
   slides,
@@ -19,39 +13,26 @@ export function CtaBanner({
   autoPlayInterval = 5000,
   className,
 }: CtaBannerProps) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const showPagination = slides.length > 1;
-
-  // Auto-play
-  useEffect(() => {
-    if (!autoPlay || !showPagination) return;
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, autoPlayInterval);
-
-    return () => clearInterval(interval);
-  }, [autoPlay, autoPlayInterval, slides.length, showPagination]);
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
+  const { currentSlide, showPagination, goToSlide } = useCtaBanner({
+    slidesCount: slides.length,
+    autoPlay,
+    autoPlayInterval,
+  });
 
   return (
     <div
       className={cn(
         "relative w-full aspect-[1328/400] overflow-hidden rounded-lg bg-white",
-        className,
+        className
       )}
     >
-      {/* Área da Imagem com Padding */}
       <div className="relative h-full w-full p-8 pb-16">
         {slides.map((slide, index) => (
           <div
             key={index}
             className={cn(
               "absolute inset-8 bottom-16 transition-opacity duration-500",
-              currentSlide === index ? "opacity-100" : "opacity-0",
+              currentSlide === index ? "opacity-100" : "opacity-0"
             )}
           >
             <Image
@@ -66,7 +47,6 @@ export function CtaBanner({
         ))}
       </div>
 
-      {/* Botão CTA - inferior direito */}
       {slides.map((slide, index) => (
         <button
           key={`btn-${index}`}
@@ -75,7 +55,7 @@ export function CtaBanner({
             "hover:opacity-90",
             currentSlide === index
               ? "opacity-100"
-              : "opacity-0 pointer-events-none",
+              : "opacity-0 pointer-events-none"
           )}
           style={{ backgroundColor: slide.buttonColor }}
         >
@@ -84,7 +64,6 @@ export function CtaBanner({
         </button>
       ))}
 
-      {/* Rodapé Branco com Paginação */}
       {showPagination && (
         <div className="absolute bottom-0 left-0 right-0 flex h-[8%] items-center justify-center gap-2 bg-white">
           {slides.map((_, index) => (
@@ -95,7 +74,7 @@ export function CtaBanner({
                 "h-2 w-2 rounded-full transition-all",
                 currentSlide === index
                   ? "bg-primary opacity-100 w-3 h-3"
-                  : "bg-primary opacity-40 hover:opacity-60 w-2 h-2",
+                  : "bg-primary opacity-40 hover:opacity-60 w-2 h-2"
               )}
               aria-label={`Ir para slide ${index + 1}`}
             />

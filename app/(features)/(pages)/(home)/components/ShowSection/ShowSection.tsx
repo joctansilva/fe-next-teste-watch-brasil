@@ -1,5 +1,3 @@
-"use client";
-
 import { Text, Card, CardAds, Carousel } from "@/components/ui";
 
 import { useInterleaveAds } from "@/hooks/useInterleaveAds";

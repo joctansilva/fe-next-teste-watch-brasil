@@ -1,5 +1,3 @@
-"use client";
-
 import { Text, LiveCard, Carousel } from "@/components/ui";
 import { inLiveShows } from "@/data/in-live";
 

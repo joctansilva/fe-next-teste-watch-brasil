@@ -1,5 +1,3 @@
-"use client";
-
 import { Text, CardAds, Button, GenreCard, Carousel } from "@/components/ui";
 
 import { ads } from "@/data/ads";
@@ -9,7 +7,6 @@ import { isAd } from "@/lib/typeGuards";
 import { getBadgeIcon, getButtonIcon } from "@/lib/getAdIcon";
 
 export function ExclusiveSection() {
-  // Mostra o primeiro anúncio (Nike) após 3 shows
   const exclusiveItems = useInsertAdsAtPositions(exclusive, [
     { ad: ads[0], position: 2 },
     { ad: ads[2], position: 3 },

@@ -1,12 +1,8 @@
-import { forwardRef, HTMLAttributes } from "react";
+import { forwardRef } from "react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 
-export interface IconProps extends Omit<HTMLAttributes<HTMLDivElement>, "children"> {
-  name: string;
-  size?: number;
-  className?: string;
-}
+import { cn } from "@/lib/utils";
+import type { IconProps } from "./Icon.types";
 
 export const Icon = forwardRef<HTMLDivElement, IconProps>(
   ({ name, size = 24, className, ...props }, ref) => {
