@@ -3,7 +3,7 @@ import { Roboto, Babylonica } from "next/font/google";
 import localFont from "next/font/local";
 import { Header } from "@/components/layout";
 import "./globals.css";
-import { MainFooter } from "@/components/layout/Footer/MainFooter";
+import { Footer } from "@/components/layout/Footer/Footer";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -40,7 +40,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="pt-16">{children}</main>
-        <MainFooter />
+        <Footer />
       </body>
     </html>
   );

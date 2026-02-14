@@ -27,3 +27,6 @@ export { Carousel } from "./Carousel";
 
 export { CtaBanner } from "./CtaBanner";
 export type { CtaBannerProps } from "./CtaBanner";
+
+export { Icon } from "./Icon";
+export type { IconProps } from "./Icon";

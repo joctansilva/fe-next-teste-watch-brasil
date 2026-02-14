@@ -120,19 +120,19 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
         </div>
 
         {/* Rodapé cinza - 80px de altura */}
-        <div className="flex h-[80px] items-start justify-between bg-tertiary p-4">
+        <div className="flex h-20 items-start justify-between bg-tertiary px-4 py-3">
           {/* Coluna Esquerda: Artista + Palco */}
-          <div className="flex flex-col gap-1">
-            <Text variant="subtitle" className="text-primary">
+          <div className="flex flex-col gap-6">
+            <Text variant="nano" className="text-primary ">
               {artistName}
             </Text>
-            <Text variant="body1" className="text-white/80">
+            <Text variant="nano" className="text-white/80">
               {stageName}
             </Text>
           </div>
 
           {/* Coluna Direita: Live + Hora */}
-          <div className="flex flex-col items-end gap-1">
+          <div className="flex flex-col items-end gap-6">
             {/* Live Badge */}
             {isLive && (
               <div className="flex items-center gap-1.5">

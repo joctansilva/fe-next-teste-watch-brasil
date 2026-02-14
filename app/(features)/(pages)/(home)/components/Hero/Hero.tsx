@@ -1,6 +1,6 @@
 "use client";
 
-import { Text, Button } from "@/components/ui";
+import { Text, Button, Icon } from "@/components/ui";
 import { useRef, useEffect, useState } from "react";
 import {
   Video,
@@ -147,7 +147,7 @@ export function Hero() {
               className="text-white/80 transition-colors hover:text-white"
               aria-label="Picture in Picture"
             >
-              <PictureInPicture2 size={48} strokeWidth={2} />
+              <Icon name="select-cam" size={48} />
             </button>
 
             {/* Fullscreen */}
@@ -156,7 +156,7 @@ export function Hero() {
               className="text-white/80 transition-colors hover:text-white"
               aria-label="Fullscreen"
             >
-              <Maximize size={48} strokeWidth={2} />
+              <Icon name="fullscreen" size={48} />
             </button>
 
             {/* Volume */}
@@ -166,9 +166,9 @@ export function Hero() {
               aria-label={isMuted ? "Unmute" : "Mute"}
             >
               {isMuted ? (
-                <VolumeX size={48} strokeWidth={2} />
+                <Icon name="volume-up" size={48} />
               ) : (
-                <Volume2 size={48} strokeWidth={2} />
+                <Icon name="volume-up" size={48} />
               )}
             </button>
 
@@ -177,7 +177,7 @@ export function Hero() {
               className="text-white/80 transition-colors hover:text-white"
               aria-label="Settings"
             >
-              <Settings size={48} strokeWidth={2} />
+              <Icon name="settings" size={48} />
             </button>
           </div>
         </div>

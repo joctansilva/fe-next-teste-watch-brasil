@@ -1,58 +1,52 @@
-import { Card, CtaBanner, LiveCard, Text } from "@/components/ui";
-import { getWatchAgainShows, getRockShows } from "@/data/shows";
-import { Carousel, Hero, LineUp, LiveSection } from "./components";
-
+import { CtaBanner } from "@/components/ui";
+import {
+  getWatchAgainShows,
+  getRockShows,
+  getAllShows,
+  getYesterdayShows,
+} from "@/data/shows";
+import { Hero, LiveSection, ShowSection } from "./components";
 import { Genre } from "./components/GenreSection/GenreSection";
 import { banners } from "@/data/banners";
 import { ExclusiveSection } from "./components/ExclusiveSection/ExclusiveSection";
+import { ads } from "@/data/ads";
 
 export default function Home() {
-  const watched = getWatchAgainShows();
-  const rock = getRockShows();
   return (
     <>
       {/* Hero Banner */}
       <Hero />
-
       {/* Conteúdo da página */}
       <div className="min-h-screen bg-background p-14">
-        <div className="mx-auto max-w-[1920px] space-y-12">
-          <LineUp />
+        <div className="mx-auto max-w-480 space-y-12">
+          {/* Line Up */}
+          <ShowSection
+            title="Line Up"
+            shows={getAllShows()}
+            ad={ads[1]}
+            adPosition={3}
+          />
+          {/* Festival for you */}
           <Genre />
+          {/* CTA */}
           <CtaBanner autoPlay slides={banners[0].slides} />
+          {/* In Live */}
           <LiveSection />
-          <LineUp />
+          {/* Yesterday Shows*/}
+          <ShowSection title="Yesterday Shows" shows={getYesterdayShows()} />
+          {/* Exclusive*/}
           <ExclusiveSection />
-          <section className="space-y-4">
-            <Text variant="title">Rock Singers</Text>
-            <Carousel>
-              {rock.map((rock) => (
-                <Card
-                  key={rock.id}
-                  image={rock.imgUrl}
-                  footerText={rock.nome}
-                  alt={rock.nome}
-                />
-              ))}
-            </Carousel>
-          </section>
+          {/* Rock Singers*/}
+          <ShowSection
+            title="Rock Singers"
+            shows={getRockShows()}
+            ad={ads[1]}
+            adPosition={7}
+          />
+          {/* CTA 2 */}
           <CtaBanner autoPlay slides={banners[1].slides} />
-
-          <section className="space-y-4">
-            <Text variant="title">Watch Again</Text>
-            <Carousel>
-              {watched.map((watch) => (
-                <Card
-                  key={watch.id}
-                  image={watch.imgUrl}
-                  footerText={watch.nome}
-                  alt={watch.nome}
-                  showLandmark={watch.wasPlayed}
-                  showWatchAgainLabel={watch.wasPlayed}
-                />
-              ))}
-            </Carousel>
-          </section>
+          {/* Watch Again */}
+          <ShowSection title="Watch Again" shows={getWatchAgainShows()} />
         </div>
       </div>
     </>

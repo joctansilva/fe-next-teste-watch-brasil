@@ -10,8 +10,7 @@ const textVariants = cva("font-sans", {
       subtitle: "text-lg leading-[120%] font-bold",
       paragraph: "text-base leading-[140%] font-normal",
       small: "text-xs leading-[130%] font-normal",
-      body1: "text-sm leading-[100%] font-normal",
-      p2: "text-sm leading-[100%] font-normal",
+      nano: "text-sm leading-[100%] font-normal",
     },
   },
   defaultVariants: {
@@ -29,8 +28,7 @@ const defaultElements: Record<
   subtitle: "h5",
   paragraph: "p",
   small: "span",
-  body1: "p",
-  p2: "p",
+  nano: "p",
 };
 
 export type TextProps<T extends ElementType = "p"> = {

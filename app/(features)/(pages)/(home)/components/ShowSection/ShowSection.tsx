@@ -1,22 +1,33 @@
 "use client";
 
 import { Text, Card, CardAds } from "@/components/ui";
-import { shows } from "@/data/shows";
-import { ads } from "@/data/ads";
+import { Carousel } from "../../../../../../components/ui/Carousel/Carousel";
 import { useInterleaveAds } from "@/hooks/useInterleaveAds";
 import { isAd } from "@/lib/typeGuards";
 import { getBadgeIcon, getButtonIcon } from "@/lib/getAdIcon";
-import { Carousel } from "../../../../../../components/ui/Carousel/Carousel";
+import type { Show } from "@/types/show";
+import type { Ad } from "@/data/ads";
 
-export function LineUp() {
-  // Mostra o primeiro anúncio (Nike) após 3 shows
-  const lineupItems = useInterleaveAds(shows, ads[1], 4);
+export interface ShowSectionProps {
+  title: string;
+  shows: Show[];
+  ad?: Ad | null;
+  adPosition?: number;
+}
+
+export function ShowSection({
+  title,
+  shows,
+  ad = null,
+  adPosition = 3,
+}: ShowSectionProps) {
+  const items = useInterleaveAds(shows, ad, adPosition);
 
   return (
     <section className="space-y-4">
-      <Text variant="title">Line Up</Text>
+      <Text variant="title">{title}</Text>
       <Carousel>
-        {lineupItems.map((item) => {
+        {items.map((item) => {
           if (isAd(item)) {
             return (
               <CardAds
