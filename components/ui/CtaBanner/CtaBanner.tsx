@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { Pagination } from "@/components/ui";
 import { useCtaBanner } from "./useCtaBanner";
 import type { CtaBannerProps } from "./CtaBanner.types";
 
@@ -65,20 +66,12 @@ export function CtaBanner({
       ))}
 
       {showPagination && (
-        <div className="absolute bottom-0 left-0 right-0 flex h-[8%] items-center justify-center gap-2 bg-white">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={cn(
-                "h-2 w-2 rounded-full transition-all",
-                currentSlide === index
-                  ? "bg-primary opacity-100 w-3 h-3"
-                  : "bg-primary opacity-40 hover:opacity-60 w-2 h-2"
-              )}
-              aria-label={`Ir para slide ${index + 1}`}
-            />
-          ))}
+        <div className="absolute bottom-0 left-0 right-0 flex h-[8%] items-center justify-center bg-white">
+          <Pagination
+            totalSlides={slides.length}
+            currentSlide={currentSlide}
+            onSlideChange={goToSlide}
+          />
         </div>
       )}
     </div>

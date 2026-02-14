@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Play, Plus } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Text, Button } from "@/components/ui";
+import { Text, Button, LiveTag } from "@/components/ui";
 import { liveCardVariants } from "./LiveCard.variants";
 import type { LiveCardProps } from "./LiveCard.types";
 
@@ -21,7 +21,7 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
       className,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <div
@@ -29,7 +29,7 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
         className={cn(
           liveCardVariants({ shape, size }),
           "flex flex-col",
-          className
+          className,
         )}
         {...props}
       >
@@ -91,17 +91,7 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
           </div>
 
           <div className="flex flex-col items-end gap-6">
-            {isLive && (
-              <div className="flex items-center gap-1.5">
-                <div className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-                </div>
-                <Text variant="small" className="font-semibold text-white">
-                  Live
-                </Text>
-              </div>
-            )}
+            {isLive && <LiveTag />}
 
             <Text variant="small" className="text-white/60">
               {dateTime}
@@ -110,7 +100,7 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 LiveCard.displayName = "LiveCard";

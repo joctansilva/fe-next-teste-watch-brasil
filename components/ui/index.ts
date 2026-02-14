@@ -14,6 +14,9 @@ export type { TextProps } from "./Text";
 export { LiveCard } from "./LiveCard";
 export type { LiveCardProps } from "./LiveCard";
 
+export { LiveTag } from "./LiveTag";
+export type { LiveTagProps } from "./LiveTag";
+
 export { Badge } from "./Badge";
 export type { BadgeProps } from "./Badge";
 
@@ -30,3 +33,6 @@ export type { CtaBannerProps } from "./CtaBanner";
 
 export { Icon } from "./Icon";
 export type { IconProps } from "./Icon";
+
+export { Pagination } from "./Pagination";
+export type { PaginationProps } from "./Pagination";
