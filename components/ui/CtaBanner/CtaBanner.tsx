@@ -61,7 +61,7 @@ export function CtaBanner({
           style={{ backgroundColor: slide.buttonColor }}
         >
           {slide.buttonText}
-          <ArrowRight />
+          <ArrowRight className="w-4 h-4 md:w-6 md:h-6" />
         </button>
       ))}
 
