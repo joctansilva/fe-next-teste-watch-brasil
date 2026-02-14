@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Roboto, Babylonica } from "next/font/google";
 import localFont from "next/font/local";
-import { Header } from "@/components/layout";
+
+import { Header, Footer } from "@/components/layout";
+
 import "./globals.css";
-import { Footer } from "@/components/layout/Footer/Footer";
 
 const roboto = Roboto({
   variable: "--font-roboto",

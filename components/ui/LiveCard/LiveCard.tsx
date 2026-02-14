@@ -1,10 +1,10 @@
 import { forwardRef, HTMLAttributes } from "react";
-import { cva, type VariantProps } from "class-variance-authority";
 import Image from "next/image";
+import { cva, type VariantProps } from "class-variance-authority";
 import { Play, Plus } from "lucide-react";
+
 import { cn } from "@/lib/utils";
-import { Text } from "../Text";
-import { Button } from "../Button";
+import { Text, Button } from "@/components/ui";
 
 const liveCardVariants = cva(
   "relative overflow-hidden select-none hover:ring-2 hover:ring-primary transition-all cursor-pointer isolate",

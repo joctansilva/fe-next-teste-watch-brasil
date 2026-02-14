@@ -1,15 +1,14 @@
 import { CtaBanner } from "@/components/ui";
+
+import { ads } from "@/data/ads";
+import { banners } from "@/data/banners";
 import {
   getWatchAgainShows,
   getRockShows,
   getAllShows,
   getYesterdayShows,
 } from "@/data/shows";
-import { Hero, LiveSection, ShowSection } from "./components";
-import { Genre } from "./components/GenreSection/GenreSection";
-import { banners } from "@/data/banners";
-import { ExclusiveSection } from "./components/ExclusiveSection/ExclusiveSection";
-import { ads } from "@/data/ads";
+import { Hero, LiveSection, ShowSection, Genre, ExclusiveSection } from "./components";
 
 export default function Home() {
   return (

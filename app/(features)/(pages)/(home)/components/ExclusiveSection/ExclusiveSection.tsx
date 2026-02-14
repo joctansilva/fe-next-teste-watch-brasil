@@ -1,12 +1,12 @@
 "use client";
 
-import { Text, CardAds, Button, GenreCard } from "@/components/ui";
+import { Text, CardAds, Button, GenreCard, Carousel } from "@/components/ui";
+
 import { ads } from "@/data/ads";
-import { isAd } from "@/lib/typeGuards";
-import { getBadgeIcon, getButtonIcon } from "@/lib/getAdIcon";
-import { Carousel } from "../../../../../../components/ui/Carousel/Carousel";
 import { exclusive } from "@/data/exclusive-content";
 import { useInsertAdsAtPositions } from "@/hooks/useInsertAdsAtPositions";
+import { isAd } from "@/lib/typeGuards";
+import { getBadgeIcon, getButtonIcon } from "@/lib/getAdIcon";
 
 export function ExclusiveSection() {
   // Mostra o primeiro anúncio (Nike) após 3 shows

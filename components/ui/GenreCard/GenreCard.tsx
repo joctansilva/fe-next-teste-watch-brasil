@@ -1,7 +1,8 @@
 import { forwardRef, HTMLAttributes } from "react";
 import Image from "next/image";
+
 import { cn } from "@/lib/utils";
-import { Text } from "../Text";
+import { Text } from "@/components/ui";
 
 export interface GenreCardProps extends HTMLAttributes<HTMLDivElement> {
   title: string;

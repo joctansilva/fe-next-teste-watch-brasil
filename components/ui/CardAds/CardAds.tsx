@@ -1,8 +1,8 @@
 import { forwardRef, HTMLAttributes, ReactNode } from "react";
 import Image from "next/image";
+
 import { cn } from "@/lib/utils";
-import { Badge } from "../Badge";
-import { Button } from "../Button";
+import { Badge, Button } from "@/components/ui";
 
 export interface CardAdsProps extends HTMLAttributes<HTMLDivElement> {
   image: string;

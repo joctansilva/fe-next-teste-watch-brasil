@@ -1,15 +1,9 @@
 "use client";
 
-import { Text, Button, Icon } from "@/components/ui";
 import { useRef, useEffect, useState } from "react";
-import {
-  Video,
-  Maximize,
-  VolumeX,
-  Volume2,
-  Settings,
-  PictureInPicture2,
-} from "lucide-react";
+import { Video } from "lucide-react";
+
+import { Text, Button, Icon } from "@/components/ui";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);

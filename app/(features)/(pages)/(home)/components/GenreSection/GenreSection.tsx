@@ -1,12 +1,12 @@
 "use client";
 
-import { Text, CardAds, Button, GenreCard } from "@/components/ui";
+import { Text, CardAds, Button, GenreCard, Carousel } from "@/components/ui";
+
 import { ads } from "@/data/ads";
+import { genres } from "@/data/genres";
 import { useInterleaveAds } from "@/hooks/useInterleaveAds";
 import { isAd } from "@/lib/typeGuards";
 import { getBadgeIcon, getButtonIcon } from "@/lib/getAdIcon";
-import { Carousel } from "../../../../../../components/ui/Carousel/Carousel";
-import { genres } from "@/data/genres";
 
 export function Genre() {
   // Mostra o primeiro anúncio (Nike) após 3 shows

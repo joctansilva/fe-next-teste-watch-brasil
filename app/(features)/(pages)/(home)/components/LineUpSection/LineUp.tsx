@@ -1,12 +1,12 @@
 "use client";
 
-import { Text, Card, CardAds } from "@/components/ui";
+import { Text, Card, CardAds, Carousel } from "@/components/ui";
+
 import { shows } from "@/data/shows";
 import { ads } from "@/data/ads";
 import { useInterleaveAds } from "@/hooks/useInterleaveAds";
 import { isAd } from "@/lib/typeGuards";
 import { getBadgeIcon, getButtonIcon } from "@/lib/getAdIcon";
-import { Carousel } from "../../../../../../components/ui/Carousel/Carousel";
 
 export function LineUp() {
   // Mostra o primeiro anúncio (Nike) após 3 shows

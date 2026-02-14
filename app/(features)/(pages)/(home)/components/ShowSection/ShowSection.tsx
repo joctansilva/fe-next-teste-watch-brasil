@@ -1,7 +1,7 @@
 "use client";
 
-import { Text, Card, CardAds } from "@/components/ui";
-import { Carousel } from "../../../../../../components/ui/Carousel/Carousel";
+import { Text, Card, CardAds, Carousel } from "@/components/ui";
+
 import { useInterleaveAds } from "@/hooks/useInterleaveAds";
 import { isAd } from "@/lib/typeGuards";
 import { getBadgeIcon, getButtonIcon } from "@/lib/getAdIcon";

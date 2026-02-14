@@ -1,8 +1,9 @@
 import { forwardRef, HTMLAttributes } from "react";
 import Image from "next/image";
 import { cva, type VariantProps } from "class-variance-authority";
+
 import { cn } from "@/lib/utils";
-import { Text } from "../Text";
+import { Text } from "@/components/ui";
 
 const cardVariants = cva(
   "relative overflow-hidden bg-cover bg-center bg-no-repeat select-none h-[288px] w-[208px] hover:ring-2 hover:ring-primary",

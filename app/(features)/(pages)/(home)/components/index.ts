@@ -1,5 +1,7 @@
-export { Hero } from "./Hero/Hero";
-export { Carousel } from "../../../../../components/ui/Carousel/Carousel";
-export { LineUp } from "./LineUpSection/LineUp";
-export { LiveSection } from "./LiveSection/LiveSection";
-export { ShowSection } from "./ShowSection/ShowSection";
+export { Hero } from "./Hero";
+export { LineUp } from "./LineUpSection";
+export { LiveSection } from "./LiveSection";
+export { ShowSection } from "./ShowSection";
+export type { ShowSectionProps } from "./ShowSection";
+export { Genre } from "./GenreSection";
+export { ExclusiveSection } from "./ExclusiveSection";
