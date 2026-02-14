@@ -20,7 +20,7 @@ export default function HomePage() {
       {/* Hero Banner */}
       <Hero />
       {/* Conteúdo da página */}
-      <div className="min-h-screen bg-background p-14">
+      <div className="min-h-screen bg-background p-6 md:p-14">
         <div className="mx-auto max-w-480 space-y-12">
           {/* Line Up */}
           <ShowSection

@@ -4,7 +4,7 @@ import Image from "next/image";
 export function Footer() {
   return (
     <footer className="w-full border-t border-white/10 bg-secondary text-neutral-300">
-      <div className="mx-auto max-w-480 px-14 py-12">
+      <div className="mx-auto max-w-480 px-6 py-12 md:px-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[3fr_1fr]">
           {/* Left Column - Legal, Social, Links */}
           <div>
