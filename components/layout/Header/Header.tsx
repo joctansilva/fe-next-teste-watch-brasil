@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HeaderNav } from "./HeaderNav";
-import { Avatar } from "@/components/ui";
+import { UserMenu } from "@/components/ui";
 
 export function Header() {
   return (
@@ -36,7 +36,7 @@ export function Header() {
         </div>
 
         {/* Right Side - User Profile */}
-        <Avatar showName userName="Petter Parker" />
+        <UserMenu userName="Petter Parker" />
       </div>
     </header>
   );

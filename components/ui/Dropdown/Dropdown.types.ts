@@ -15,6 +15,12 @@ export interface DropdownProps {
   isOpen: boolean;
 
   /**
+   * Alinhamento do dropdown
+   * @default "left"
+   */
+  align?: "left" | "right";
+
+  /**
    * Classes CSS adicionais.
    */
   className?: string;

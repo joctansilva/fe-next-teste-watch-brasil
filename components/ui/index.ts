@@ -48,3 +48,6 @@ export type { DropdownProps } from "./Dropdown";
 
 export { Avatar } from "./Avatar";
 export type { AvatarProps } from "./Avatar";
+
+export { UserMenu } from "./UserMenu";
+export type { UserMenuProps } from "./UserMenu";
