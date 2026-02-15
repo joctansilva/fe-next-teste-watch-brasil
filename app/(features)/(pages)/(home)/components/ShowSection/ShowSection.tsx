@@ -11,6 +11,8 @@ export interface ShowSectionProps {
   shows: Show[];
   ad?: Ad | null;
   adPosition?: number;
+  showWatchAgainLabel?: boolean;
+  showLandmark?: boolean;
 }
 
 export function ShowSection({
@@ -18,6 +20,8 @@ export function ShowSection({
   shows,
   ad = null,
   adPosition = 3,
+  showWatchAgainLabel = false,
+  showLandmark = false,
 }: ShowSectionProps) {
   const items = useInterleaveAds(shows, ad, adPosition);
 
@@ -47,6 +51,8 @@ export function ShowSection({
               image={item.imgUrl}
               footerText={item.nome}
               alt={item.nome}
+              showWatchAgainLabel={showWatchAgainLabel}
+              showLandmark={showLandmark && item.wasPlayed}
             />
           );
         })}

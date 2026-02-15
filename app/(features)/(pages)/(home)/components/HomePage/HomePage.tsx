@@ -57,7 +57,12 @@ export default function HomePage() {
             className="hidden md:flex"
           />
           {/* Watch Again */}
-          <ShowSection title="Watch Again" shows={getWatchAgainShows()} />
+          <ShowSection
+            title="Watch Again"
+            shows={getWatchAgainShows()}
+            showWatchAgainLabel
+            showLandmark
+          />
         </div>
       </div>
     </>

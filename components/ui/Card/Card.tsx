@@ -18,7 +18,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
       className,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <div
@@ -29,7 +29,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         aria-label={alt || footerText}
         {...props}
       >
-        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
 
         <div className="relative flex h-full flex-col p-4 pb-12">
           {showWatchAgainLabel && (
@@ -51,7 +51,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
             <Image
               src="/watch-landmark.svg"
               alt="Watch Landmark"
-              width={60}
+              width={70}
               height={40}
               className="object-contain"
             />
@@ -59,7 +59,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         )}
       </div>
     );
-  }
+  },
 );
 
 Card.displayName = "Card";
