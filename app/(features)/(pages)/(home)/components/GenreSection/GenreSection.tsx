@@ -12,7 +12,7 @@ export function Genre() {
 
   return (
     <section className="relative">
-      {/* Mobile Layout */}
+      {/* Layout Mobile */}
       <div className="flex flex-col gap-4 md:hidden">
         <div className="flex items-center justify-between">
           <Text variant="subtitle" as="h2">
@@ -57,7 +57,7 @@ export function Genre() {
         </div>
       </div>
 
-      {/* Desktop Layout */}
+      {/* Layout Desktop */}
       <div className="hidden md:flex items-center gap-8">
         {/* Coluna Esquerda - Informações */}
         <div className="relative z-10 flex shrink-0 flex-col justify-center gap-4 bg-background pr-8 h-52">

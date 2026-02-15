@@ -33,7 +33,6 @@ export function UserMenu({ userName, className }: UserMenuProps) {
 
   return (
     <div className={cn("flex items-center gap-4", className)}>
-      {/* Settings Dropdown */}
       {/* Avatar */}
       <Avatar showName userName={userName} />{" "}
       <div ref={dropdownRef} className="relative">

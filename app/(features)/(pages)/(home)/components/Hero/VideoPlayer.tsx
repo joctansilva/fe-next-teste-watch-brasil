@@ -7,7 +7,7 @@ interface VideoPlayerProps {
 export function VideoPlayer({ togglePlay }: VideoPlayerProps) {
   return (
     <>
-      {/* BG Video */}
+      {/* Vídeo de Fundo */}
       <div className="absolute inset-0 overflow-hidden">
         <div
           id="youtube-player"

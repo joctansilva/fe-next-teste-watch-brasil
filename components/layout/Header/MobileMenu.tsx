@@ -4,8 +4,6 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { genres } from "@/data/genres";
-import { exclusive } from "@/data/exclusive-content";
 
 interface MobileMenuProps {
   menuItems: Array<{
@@ -26,16 +24,16 @@ export function MobileMenu({ menuItems }: MobileMenuProps) {
 
   return (
     <>
-      {/* Menu Hamburguer Button */}
+      {/* Botão Menu Hamburguer */}
       <button
         onClick={() => setIsOpen(true)}
         className="md:hidden flex items-center justify-center text-white hover:text-primary transition-colors"
-        aria-label="Open menu"
+        aria-label="Abrir menu"
       >
         <Menu size={24} strokeWidth={2} />
       </button>
 
-      {/* Backdrop */}
+      {/* Fundo Escuro */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-50 md:hidden"
@@ -50,19 +48,19 @@ export function MobileMenu({ menuItems }: MobileMenuProps) {
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        {/* Header do Drawer */}
+        {/* Cabeçalho do Drawer */}
         <div className="flex items-center justify-between p-6 border-b border-tertiary">
           <span className="text-white text-lg font-medium">Menu</span>
           <button
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-center text-white hover:text-primary transition-colors"
-            aria-label="Close menu"
+            aria-label="Fechar menu"
           >
             <X size={24} strokeWidth={2} />
           </button>
         </div>
 
-        {/* Menu Items */}
+        {/* Itens do Menu */}
         <nav className="flex flex-col p-4 overflow-y-auto h-[calc(100%-80px)]">
           {menuItems.map((item) => (
             <div key={item.label}>
@@ -112,10 +110,10 @@ export function MobileMenu({ menuItems }: MobileMenuProps) {
             </div>
           ))}
 
-          {/* Divider */}
+          {/* Divisor */}
           <div className="my-4 border-t border-tertiary" />
 
-          {/* Settings Links */}
+          {/* Links de Configurações */}
           <Link
             href="/profile"
             onClick={() => setIsOpen(false)}

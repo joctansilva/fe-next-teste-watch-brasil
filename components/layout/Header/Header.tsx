@@ -35,7 +35,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-16">
-      {/* Gradient Background */}
+      {/* Gradiente de Fundo */}
       <div
         className="absolute inset-0"
         style={{
@@ -44,9 +44,9 @@ export function Header() {
         }}
       />
 
-      {/* Content Container */}
+      {/* Container de Conteúdo */}
       <div className="relative mx-auto flex h-full max-w-480 items-center justify-between px-6 md:px-14">
-        {/* Left Side - Logo + Navigation (Desktop) */}
+        {/* Lado Esquerdo - Logo + Navegação (Desktop) */}
         <div className="flex items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -60,16 +60,16 @@ export function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Navegação Desktop */}
           <HeaderNav />
         </div>
 
-        {/* Right Side - Desktop User Menu */}
+        {/* Lado Direito - Menu do Usuário Desktop */}
         <div className="hidden md:block">
           <UserMenu userName="Petter Parker" />
         </div>
 
-        {/* Mobile Menu */}
+        {/* Menu Mobile */}
         <MobileMenu menuItems={mobileMenuItems} />
       </div>
     </header>
