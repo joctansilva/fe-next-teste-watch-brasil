@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Icon } from "@/components/ui";
-import { AudioLines, Home, RadioTower, Sparkles } from "lucide-react";
+import { HeaderNav } from "./HeaderNav";
+import { Avatar } from "@/components/ui";
 
 export function Header() {
   return (
@@ -32,40 +32,11 @@ export function Header() {
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-10 ml-10">
-            <Link
-              href="/"
-              className="flex items-center gap-2 text-white text-base font-medium hover:text-primary transition-colors hover:underline"
-            >
-              <Home size={16} strokeWidth={2} />
-              Home
-            </Link>
-            <Link
-              href="/live"
-              className="flex items-center gap-2 text-white text-base font-medium hover:text-primary transition-colors hover:underline"
-            >
-              <RadioTower size={16} strokeWidth={2} />
-              Live
-            </Link>
-            <Link
-              href="/styles"
-              className="flex items-center gap-2 text-white text-base font-medium hover:text-primary transition-colors hover:underline"
-            >
-              <AudioLines size={16} strokeWidth={2} />
-              Musical Styles
-            </Link>
-            <Link
-              href="/exclusive"
-              className="flex items-center gap-2 text-white text-base font-medium hover:text-primary transition-colors hover:underline"
-            >
-              <Sparkles size={16} strokeWidth={2} />
-              Exclusive Content
-            </Link>
-          </nav>
+          <HeaderNav />
         </div>
 
-        {/* Right Side - User Profile Placeholder */}
-        <div className="text-white text-base font-medium">Petter</div>
+        {/* Right Side - User Profile */}
+        <Avatar showName userName="Petter Parker" />
       </div>
     </header>
   );

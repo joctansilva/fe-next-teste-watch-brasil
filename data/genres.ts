@@ -4,6 +4,7 @@ export interface Genre {
   subtitle: string;
   gradient: string;
   wasPlayed: boolean;
+  url: string;
 }
 
 export const genres: Genre[] = [
@@ -13,6 +14,7 @@ export const genres: Genre[] = [
     subtitle: "Festival",
     gradient: "linear-gradient(320deg, #2433C0 0%, #4F60FF 100%)",
     wasPlayed: true,
+    url: "/",
   },
   {
     id: "2",
@@ -20,6 +22,7 @@ export const genres: Genre[] = [
     subtitle: "Festival",
     gradient: "linear-gradient(320deg, #016500 0%, #06DE03 100%)",
     wasPlayed: true,
+    url: "/",
   },
   {
     id: "3",
@@ -27,6 +30,7 @@ export const genres: Genre[] = [
     subtitle: "Festival",
     gradient: "linear-gradient(320deg, #5E006C 0%, #AF01CA 100%)",
     wasPlayed: true,
+    url: "/",
   },
   {
     id: "4",
@@ -34,6 +38,7 @@ export const genres: Genre[] = [
     subtitle: "Festival",
     gradient: "linear-gradient(320deg, #BF4900 0%, #FF6100 100%)",
     wasPlayed: true,
+    url: "/",
   },
   {
     id: "5",
@@ -41,6 +46,7 @@ export const genres: Genre[] = [
     subtitle: "Festival",
     gradient: "linear-gradient(320deg, #FF009A 0%, #A30062 100%)",
     wasPlayed: true,
+    url: "/",
   },
   {
     id: "6",
@@ -48,6 +54,7 @@ export const genres: Genre[] = [
     subtitle: "Festival",
     gradient: "linear-gradient(320deg, #7A5000 0%, #FFA801 100%)",
     wasPlayed: true,
+    url: "/",
   },
   {
     id: "7",
@@ -55,6 +62,7 @@ export const genres: Genre[] = [
     subtitle: "Festival",
     gradient: "linear-gradient(320deg, #006A8D 0%, #00C0FF 100%)",
     wasPlayed: true,
+    url: "/",
   },
   {
     id: "8",
@@ -62,6 +70,7 @@ export const genres: Genre[] = [
     subtitle: "Festival",
     gradient: "linear-gradient(320deg, #A80100 0%, #FF0100 100%)",
     wasPlayed: true,
+    url: "/",
   },
 ];
 

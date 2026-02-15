@@ -36,3 +36,15 @@ export type { IconProps } from "./Icon";
 
 export { Pagination } from "./Pagination";
 export type { PaginationProps } from "./Pagination";
+
+export { MenuItem } from "./MenuItem";
+export type { MenuItemProps } from "./MenuItem";
+
+export { MenuDropdown } from "./MenuDropdown";
+export type { MenuDropdownProps } from "./MenuDropdown";
+
+export { Dropdown } from "./Dropdown";
+export type { DropdownProps } from "./Dropdown";
+
+export { Avatar } from "./Avatar";
+export type { AvatarProps } from "./Avatar";

@@ -4,6 +4,7 @@ export interface Exclusive {
   subtitle: string;
   showLandmark: boolean;
   cover: string;
+  url: string;
 }
 
 export const exclusive: Exclusive[] = [
@@ -13,6 +14,7 @@ export const exclusive: Exclusive[] = [
     subtitle: "Festival",
     showLandmark: true,
     cover: "/exclusive/back-stage-cover.png",
+    url: "/",
   },
   {
     id: "2",
@@ -20,6 +22,7 @@ export const exclusive: Exclusive[] = [
     subtitle: "Festival",
     showLandmark: true,
     cover: "/exclusive/interview-cover.png",
+    url: "/",
   },
   {
     id: "3",
@@ -27,6 +30,7 @@ export const exclusive: Exclusive[] = [
     subtitle: "Festival",
     showLandmark: true,
     cover: "/exclusive/latest-news-cover.png",
+    url: "/",
   },
   {
     id: "4",
@@ -34,5 +38,6 @@ export const exclusive: Exclusive[] = [
     subtitle: "Festival",
     showLandmark: true,
     cover: "/exclusive/last-editions-cover.png",
+    url: "/",
   },
 ];
