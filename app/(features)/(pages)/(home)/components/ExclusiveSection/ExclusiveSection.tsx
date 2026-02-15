@@ -1,4 +1,4 @@
-import { Text, CardAds, Button, GenreCard, Carousel } from "@/components/ui";
+import { Text, CardAds, GenreCard, Carousel } from "@/components/ui";
 
 import { ads } from "@/data/ads";
 import { exclusive } from "@/data/exclusive-content";
@@ -17,33 +17,33 @@ export function ExclusiveSection() {
     <section className="space-y-4">
       <Text variant="title">Exclusive Content</Text>
       <Carousel>
-          {exclusiveItems.map((item) => {
-            if (isAd(item)) {
-              return (
-                <CardAds
-                  key={`ad-${item.id}`}
-                  image={item.image}
-                  alt={item.alt}
-                  badgeText={item.badgeText}
-                  badgeIcon={getBadgeIcon(item.badgeIcon)}
-                  buttonText={item.buttonText}
-                  buttonClassName={item.buttonClassName}
-                  buttonIcon={getButtonIcon(item.buttonIcon)}
-                  logo={item.logo}
-                />
-              );
-            }
+        {exclusiveItems.map((item) => {
+          if (isAd(item)) {
             return (
-              <GenreCard
+              <CardAds
                 key={`ad-${item.id}`}
-                title={item.name}
-                subtitle={item.subtitle}
-                showLandmark={item.showLandmark}
-                backgroundImage={item.cover}
+                image={item.image}
+                alt={item.alt}
+                badgeText={item.badgeText}
+                badgeIcon={getBadgeIcon(item.badgeIcon)}
+                buttonText={item.buttonText}
+                buttonClassName={item.buttonClassName}
+                buttonIcon={getButtonIcon(item.buttonIcon)}
+                logo={item.logo}
               />
             );
-          })}
-        </Carousel>
+          }
+          return (
+            <GenreCard
+              key={`ad-${item.id}`}
+              title={item.name}
+              subtitle={item.subtitle}
+              showLandmark={item.showLandmark}
+              backgroundImage={item.cover}
+            />
+          );
+        })}
+      </Carousel>
     </section>
   );
 }

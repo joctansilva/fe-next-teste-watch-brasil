@@ -16,7 +16,6 @@ export function Hero() {
     >
       <VideoPlayer togglePlay={togglePlay} />
 
-      {/* Conteúdo do Hero */}
       <div className="relative z-10 flex h-full flex-col justify-between pointer-events-none">
         <HeroInfo />
         <HeroControls

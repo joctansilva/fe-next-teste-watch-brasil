@@ -15,7 +15,6 @@ export function HeroInfo({
 }: HeroInfoProps) {
   return (
     <div className="pointer-events-auto">
-      {/* Informações do Artista */}
       <div className="flex flex-col gap-2 px-4 py-4 md:px-16 md:py-14">
         <Text
           variant="hero"
@@ -25,7 +24,6 @@ export function HeroInfo({
           {artistName}
         </Text>
         <div className="flex items-center gap-1.5 md:gap-3 text-white flex-wrap">
-          {/* Badge de Live */}
           {isLive && (
             <div className="flex items-center gap-1.5">
               <div className="relative flex h-2 w-2">

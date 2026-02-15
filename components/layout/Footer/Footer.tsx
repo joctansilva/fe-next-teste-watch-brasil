@@ -1,5 +1,6 @@
 import { Icon, Text } from "@/components/ui";
 import Image from "next/image";
+import { socialMedia } from "@/data/social-media";
 
 export function Footer() {
   return (
@@ -32,12 +33,24 @@ export function Footer() {
 
             {/* Ícones Sociais */}
             <div className="order-4 mt-0 flex h-10 items-center justify-center gap-8 text-neutral-400 md:order-0 md:mt-6 md:justify-start">
-              <Icon name="youtube" size={24} />
-              <Icon name="linkedin" size={24} />
-              <Icon name="instagram" size={24} />
-              <Icon name="facebook" size={12} />
-              <Icon name="tiktok" size={20} />
-              <Icon name="twitter" size={24} />
+              {socialMedia.map((social) =>
+                social.url ? (
+                  <a
+                    key={social.id}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="transition-colors hover:text-primary"
+                  >
+                    <Icon name={social.icon} size={social.size} />
+                  </a>
+                ) : (
+                  <div key={social.id} className="opacity-50">
+                    <Icon name={social.icon} size={social.size} />
+                  </div>
+                ),
+              )}
             </div>
 
             {/* Links do Rodapé */}

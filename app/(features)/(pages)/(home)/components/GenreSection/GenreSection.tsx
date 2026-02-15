@@ -7,7 +7,6 @@ import { isAd } from "@/lib/typeGuards";
 import { getBadgeIcon, getButtonIcon } from "@/lib/getAdIcon";
 
 export function Genre() {
-  // Mostra o primeiro anúncio (Nike) após 3 shows
   const genreItens = useInterleaveAds(genres, ads[2], 2);
 
   return (
@@ -25,7 +24,6 @@ export function Genre() {
         <Text variant="nano" className="text-white/80 text-xs">
           Explore your favorite genres and discover new rhythms to love!
         </Text>
-        <div className="overflow-hidden -mr-6">
           <Carousel>
             {genreItens.map((item) => {
               if (isAd(item)) {
@@ -54,12 +52,10 @@ export function Genre() {
               );
             })}
           </Carousel>
-        </div>
       </div>
 
       {/* Layout Desktop */}
       <div className="hidden md:flex items-center gap-8">
-        {/* Coluna Esquerda - Informações */}
         <div className="relative z-10 flex shrink-0 flex-col justify-center gap-4 bg-background pr-8 h-52">
           <Text variant="subtitle" as="h2">
             Festival for you
@@ -76,9 +72,7 @@ export function Genre() {
             </Button>
           </div>
         </div>
-
-        {/* Coluna Direita - Carrossel */}
-        <div className="flex-1 overflow-hidden -mr-14">
+        <div className="flex-1 overflow-hidden">
           <Carousel>
             {genreItens.map((item) => {
               if (isAd(item)) {

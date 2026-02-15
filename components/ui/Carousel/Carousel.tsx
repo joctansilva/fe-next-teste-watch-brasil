@@ -75,7 +75,7 @@ export function Carousel({
           "flex gap-4 overflow-x-auto scroll-smooth",
           "scrollbar-hide",
           "px-1 py-2 pb-4",
-          "-mx-14",
+          "-mx-6 md:-mx-14",
           isDragging ? "cursor-grabbing" : "cursor-grab",
           "select-none",
           className,
@@ -91,15 +91,15 @@ export function Carousel({
               key={index}
               className={cn(
                 "shrink-0",
-                index === 0 && "ml-14",
-                index === children.length - 1 && "mr-14"
+                index === 0 && "ml-6 md:ml-14",
+                index === children.length - 1 && "mr-6 md:mr-14"
               )}
             >
               {child}
             </div>
           ))
         ) : (
-          <div className="shrink-0 ml-14 mr-14">{children}</div>
+          <div className="shrink-0 ml-6 md:ml-14 mr-6 md:mr-14">{children}</div>
         )}
       </div>
     </div>
