@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Icon } from "@/components/ui";
+import { AudioLines, Home, RadioTower, Sparkles } from "lucide-react";
 
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-16">
-      {/* Gradient Background - Custom stops */}
+      {/* Gradient Background */}
       <div
         className="absolute inset-0"
         style={{
@@ -14,57 +16,56 @@ export function Header() {
       />
 
       {/* Content Container */}
-      <div className="relative mx-auto flex h-full max-w-7xl items-center justify-between px-6">
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.svg"
-            alt="Watch Brasil"
-            width={120}
-            height={40}
-            className="h-auto w-auto"
-            priority
-          />
-        </Link>
-
-        {/* Navigation - Opcional */}
-        <nav className="hidden md:flex items-center gap-8">
-          <Link
-            href="/"
-            className="text-white text-sm font-medium hover:text-primary transition-colors"
-          >
-            Início
-          </Link>
-          <Link
-            href="/shows"
-            className="text-white text-sm font-medium hover:text-primary transition-colors"
-          >
-            Shows
-          </Link>
-          <Link
-            href="/profile"
-            className="text-white text-sm font-medium hover:text-primary transition-colors"
-          >
-            Perfil
-          </Link>
-        </nav>
-
-        {/* Mobile Menu Button - Opcional */}
-        <button className="md:hidden text-white">
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
+      <div className="relative mx-auto flex h-full max-w-480 items-center justify-between px-14">
+        {/* Left Side - Logo + Navigation */}
+        <div className="flex items-center">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.svg"
+              alt="Watch Brasil"
+              width={120}
+              height={40}
+              className="h-auto w-auto"
+              priority
             />
-          </svg>
-        </button>
+          </Link>
+
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-10 ml-10">
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-white text-base font-medium hover:text-primary transition-colors hover:underline"
+            >
+              <Home size={16} strokeWidth={2} />
+              Home
+            </Link>
+            <Link
+              href="/live"
+              className="flex items-center gap-2 text-white text-base font-medium hover:text-primary transition-colors hover:underline"
+            >
+              <RadioTower size={16} strokeWidth={2} />
+              Live
+            </Link>
+            <Link
+              href="/styles"
+              className="flex items-center gap-2 text-white text-base font-medium hover:text-primary transition-colors hover:underline"
+            >
+              <AudioLines size={16} strokeWidth={2} />
+              Musical Styles
+            </Link>
+            <Link
+              href="/exclusive"
+              className="flex items-center gap-2 text-white text-base font-medium hover:text-primary transition-colors hover:underline"
+            >
+              <Sparkles size={16} strokeWidth={2} />
+              Exclusive Content
+            </Link>
+          </nav>
+        </div>
+
+        {/* Right Side - User Profile Placeholder */}
+        <div className="text-white text-base font-medium">Petter</div>
       </div>
     </header>
   );
