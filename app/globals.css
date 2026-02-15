@@ -28,6 +28,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-roboto), sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 /* Esconder scrollbar mantendo funcionalidade */

@@ -21,7 +21,7 @@ export default function HomePage() {
       <Hero />
       {/* Conteúdo da página */}
       <div className="min-h-screen bg-background p-6 md:p-14">
-        <div className="mx-auto max-w-480 space-y-12">
+        <div className="mx-auto max-w-480 space-y-3 md:space-y-12">
           {/* Line Up */}
           <ShowSection
             title="Line Up"
@@ -32,7 +32,11 @@ export default function HomePage() {
           {/* Festival for you */}
           <Genre />
           {/* CTA */}
-          <CtaBanner autoPlay slides={banners[0].slides} />
+          <CtaBanner
+            autoPlay
+            slides={banners[0].slides}
+            className="hidden md:flex"
+          />
           {/* In Live */}
           <LiveSection />
           {/* Yesterday Shows*/}
@@ -47,7 +51,11 @@ export default function HomePage() {
             adPosition={7}
           />
           {/* CTA 2 */}
-          <CtaBanner autoPlay slides={banners[1].slides} />
+          <CtaBanner
+            autoPlay
+            slides={banners[1].slides}
+            className="hidden md:flex"
+          />
           {/* Watch Again */}
           <ShowSection title="Watch Again" shows={getWatchAgainShows()} />
         </div>

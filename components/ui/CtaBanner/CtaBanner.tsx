@@ -23,7 +23,7 @@ export function CtaBanner({
   return (
     <div
       className={cn(
-        "relative w-full aspect-1328/400 overflow-hidden bg-white",
+        "relative w-full aspect-[3/2] overflow-hidden bg-white md:aspect-1328/400",
         className,
       )}
     >
@@ -32,7 +32,7 @@ export function CtaBanner({
           <div
             key={index}
             className={cn(
-              "absolute inset-8 lg:bottom-10 md:bottom-0 transition-opacity duration-500",
+              "absolute inset-4 bottom-12 transition-opacity duration-500 md:inset-8 md:bottom-10 lg:bottom-10",
               currentSlide === index ? "opacity-100" : "opacity-0",
             )}
           >
@@ -41,7 +41,7 @@ export function CtaBanner({
               alt={slide.alt}
               fill
               className="object-cover object-center"
-              sizes="(max-width: 1920px) 100vw, 1920px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1920px) 100vw, 1920px"
               priority={index === 0}
             />
           </div>
@@ -52,7 +52,8 @@ export function CtaBanner({
         <button
           key={`btn-${index}`}
           className={cn(
-            "absolute right-[48px] bottom-[64px] rounded px-8 py-1.5 font-extrabold text-lg text-white transition-opacity duration-500 flex flex-row gap-2.5 items-center cursor-pointer",
+            "absolute bottom-14 left-1/2 -translate-x-1/2 rounded px-4 py-1 text-sm font-extrabold text-white transition-opacity duration-500 flex flex-row gap-1.5 items-center cursor-pointer",
+            "md:left-auto md:right-[48px] md:bottom-[64px] md:translate-x-0 md:px-8 md:py-1.5 md:text-lg md:gap-2.5",
             "hover:opacity-90",
             currentSlide === index
               ? "opacity-100"
@@ -66,7 +67,7 @@ export function CtaBanner({
       ))}
 
       {showPagination && (
-        <div className="absolute bottom-0 left-0 right-0 flex h-[8%] items-center justify-center ">
+        <div className="absolute bottom-0 left-0 right-0 flex h-10 items-center justify-center md:h-[8%]">
           <Pagination
             totalSlides={slides.length}
             currentSlide={currentSlide}

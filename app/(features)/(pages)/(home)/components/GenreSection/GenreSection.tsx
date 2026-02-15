@@ -14,11 +14,14 @@ export function Genre() {
     <section className="relative">
       <div className="flex items-center gap-8">
         {/* Coluna Esquerda - Informações */}
-        <div className="relative z-10 flex shrink-0 flex-col justify-center gap-4 bg-background pr-8 h-52">
+        <div className="relative z-10 flex shrink-0 flex-col justify-center gap-4 bg-background  md:pr-8 h-52">
           <Text variant="subtitle" as="h2">
             Festival for you
           </Text>
-          <Text variant="paragraph" className="max-w-xs text-white/80 w-44.5">
+          <Text
+            variant="paragraph"
+            className="max-w-xs text-white/80 w-28 md:w-44.5 text-sm"
+          >
             Explore your favorite genres and discover new rhythms to love!
           </Text>
           <div>
