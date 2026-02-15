@@ -16,8 +16,7 @@ export function ExclusiveSection() {
   return (
     <section className="space-y-4">
       <Text variant="title">Exclusive Content</Text>
-      <div className="flex-1 overflow-hidden -mr-14 ">
-        <Carousel>
+      <Carousel>
           {exclusiveItems.map((item) => {
             if (isAd(item)) {
               return (
@@ -45,7 +44,6 @@ export function ExclusiveSection() {
             );
           })}
         </Carousel>
-      </div>
     </section>
   );
 }

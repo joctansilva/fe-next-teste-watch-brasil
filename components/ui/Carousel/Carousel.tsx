@@ -87,12 +87,19 @@ export function Carousel({
       >
         {Array.isArray(children) ? (
           children.map((child, index) => (
-            <div key={index} className={cn("shrink-0", index === 0 && "ml-14")}>
+            <div
+              key={index}
+              className={cn(
+                "shrink-0",
+                index === 0 && "ml-14",
+                index === children.length - 1 && "mr-14"
+              )}
+            >
               {child}
             </div>
           ))
         ) : (
-          <div className="shrink-0 ml-14">{children}</div>
+          <div className="shrink-0 ml-14 mr-14">{children}</div>
         )}
       </div>
     </div>

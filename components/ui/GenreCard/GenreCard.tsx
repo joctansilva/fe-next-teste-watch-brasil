@@ -17,7 +17,7 @@ export const GenreCard = forwardRef<HTMLDivElement, GenreCardProps>(
       className,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <div
@@ -25,8 +25,8 @@ export const GenreCard = forwardRef<HTMLDivElement, GenreCardProps>(
         className={cn(
           "relative h-52 overflow-hidden rounded-lg cursor-pointer",
           "hover:ring-2 hover:ring-primary transition-all",
-          backgroundImage ? "w-110" : "w-52",
-          className
+          backgroundImage ? "w-80 md:w-110" : "w-52",
+          className,
         )}
         {...props}
       >
@@ -69,7 +69,7 @@ export const GenreCard = forwardRef<HTMLDivElement, GenreCardProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 GenreCard.displayName = "GenreCard";
