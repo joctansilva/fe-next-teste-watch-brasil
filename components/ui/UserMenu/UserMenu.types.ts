@@ -1,10 +1,10 @@
 export interface UserMenuProps {
   /**
-   * Nome do usuário
+   * The user name.
    */
   userName: string;
   /**
-   * Classes CSS adicionais
+   * Additional CSS classes.
    */
   className?: string;
 }

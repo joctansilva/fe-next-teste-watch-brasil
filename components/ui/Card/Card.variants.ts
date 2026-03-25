@@ -4,11 +4,11 @@ import { cva } from "class-variance-authority";
  * Card Variants
  */
 export const cardVariants = cva(
-  "relative overflow-hidden bg-cover bg-center bg-no-repeat select-none h-[288px] w-[208px] hover:ring-2 hover:ring-primary",
+  "relative overflow-hidden select-none h-[288px] w-[208px] hover:ring-2 hover:ring-primary",
   {
     variants: {
       /**
-       * O formato do card, sendo quadrado ou arredondado.
+       * The card shape — square or rounded.
        * @default rounded
        */
       shape: {
@@ -28,7 +28,7 @@ export const cardVariants = cva(
 export const subtitleVariants = cva("text-sm", {
   variants: {
     /**
-     * A fonte do subtítulo.
+     * The subtitle font.
      * @default sans
      */
     font: {

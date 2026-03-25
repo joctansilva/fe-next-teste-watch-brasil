@@ -5,22 +5,22 @@ import type { ReactNode } from "react";
  */
 export interface MenuItemProps {
   /**
-   * O ícone a ser exibido.
+   * The icon to display.
    */
   icon?: ReactNode;
 
   /**
-   * O texto do item.
+   * The item label.
    */
   children: ReactNode;
 
   /**
-   * A URL de destino.
+   * The destination URL.
    */
   href: string;
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

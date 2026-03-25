@@ -6,7 +6,7 @@ import { exclusive } from "@/data/exclusive-content";
 
 export function HeaderNav() {
   return (
-    <nav className="hidden md:flex items-center gap-10 ml-10">
+    <nav className="hidden md:flex items-center gap-10 ml-10" aria-label="Main navigation">
       <MenuItem href="/" icon={<Home size={16} strokeWidth={2} />}>
         Home
       </MenuItem>

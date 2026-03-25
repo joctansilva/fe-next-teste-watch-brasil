@@ -18,19 +18,19 @@ export const banners: Banner[] = [
     slides: [
       {
         image: "/banners/banner4.png",
-        alt: "Promoção Especial 1",
+        alt: "Special Promotion 1",
         buttonText: "GET A TAST OF AMSTERDAM",
         buttonColor: "#008630",
       },
       {
         image: "/banners/banner2.png",
-        alt: "Promoção Especial 2",
+        alt: "Special Promotion 2",
         buttonText: "LOOK AT THE NEW SHOW",
         buttonColor: "#FF567E",
       },
       {
         image: "/banners/banner5.png",
-        alt: "Promoção Especial 3",
+        alt: "Special Promotion 3",
         buttonText: "GET A TASTE OF A DIET COKE",
         buttonColor: "#DA0302",
       },
@@ -43,7 +43,7 @@ export const banners: Banner[] = [
     slides: [
       {
         image: "/banners/banner6.png",
-        alt: "Conteúdo Exclusivo",
+        alt: "Exclusive Content",
         buttonText: "GET A TASTE OF THE NEW COKE",
         buttonColor: "#DA0302",
       },
@@ -65,5 +65,5 @@ export const banners: Banner[] = [
   },
 ];
 
-// Helper para pegar banner por ID
+// Helper to get banner by ID
 export const getBannerById = (id: string) => banners.find((b) => b.id === id);

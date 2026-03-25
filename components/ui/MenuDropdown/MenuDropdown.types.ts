@@ -5,22 +5,22 @@ import type { ReactNode } from "react";
  */
 export interface MenuDropdownProps {
   /**
-   * O ícone a ser exibido.
+   * The icon to display.
    */
   icon?: ReactNode;
 
   /**
-   * O texto do item.
+   * The item label.
    */
   label: ReactNode;
 
   /**
-   * O conteúdo do dropdown.
+   * The dropdown content.
    */
   children: ReactNode;
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

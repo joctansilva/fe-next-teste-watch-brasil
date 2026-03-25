@@ -3,7 +3,7 @@ export interface InLive {
   name: string;
   stage: string;
   isLive: boolean;
-  dateTime: string; // Formato: dd.mm.aa - 00:00h
+  dateTime: string; // Format: dd.mm.yy - 00:00h
   image: string;
 }
 
@@ -58,10 +58,10 @@ export const inLiveShows: InLive[] = [
   },
 ];
 
-// Helper para filtrar apenas shows ao vivo
+// Helper to filter only live shows
 export const getCurrentLiveShows = () =>
   inLiveShows.filter((show) => show.isLive);
 
-// Helper para filtrar shows agendados (não ao vivo)
+// Helper to filter scheduled shows (not live)
 export const getScheduledShows = () =>
   inLiveShows.filter((show) => !show.isLive);

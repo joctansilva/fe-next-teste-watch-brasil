@@ -3,21 +3,21 @@ import type { Ad } from "@/data/ads";
 
 export interface AdPosition {
   ad: Ad;
-  position: number; // Posição onde inserir (após X items)
+  position: number; // Position at which to insert (after X items)
 }
 
 /**
- * Hook para inserir múltiplos anúncios em posições específicas
+ * Hook to insert multiple ads at specific positions
  *
- * @param items - Array de items (shows, produtos, etc)
- * @param adPositions - Array de objetos { ad, position }
- * @returns Array mesclado com items e ads nas posições especificadas
+ * @param items - Array of items (shows, products, etc.)
+ * @param adPositions - Array of { ad, position } objects
+ * @returns Merged array with items and ads at the specified positions
  *
  * @example
  * const merged = useInsertAdsAtPositions(shows, [
- *   { ad: ads[0], position: 2 },  // Insere ads[0] após 2 items
- *   { ad: ads[1], position: 5 },  // Insere ads[1] após 5 items
- *   { ad: ads[2], position: 8 },  // Insere ads[2] após 8 items
+ *   { ad: ads[0], position: 2 },  // Insert ads[0] after 2 items
+ *   { ad: ads[1], position: 5 },  // Insert ads[1] after 5 items
+ *   { ad: ads[2], position: 8 },  // Insert ads[2] after 8 items
  * ]);
  */
 export function useInsertAdsAtPositions<T>(
@@ -29,8 +29,8 @@ export function useInsertAdsAtPositions<T>(
 
     const result: Array<T | Ad> = [...items];
 
-    // Ordena por posição decrescente para inserir do final para o início
-    // Isso evita que as posições mudem após cada inserção
+    // Sort by descending position so we insert from end to start,
+    // preventing index shifts after each insertion
     const sortedPositions = [...adPositions].sort((a, b) => b.position - a.position);
 
     sortedPositions.forEach(({ ad, position }) => {

@@ -5,38 +5,38 @@ import type { HTMLAttributes } from "react";
  */
 export interface GenreCardProps extends HTMLAttributes<HTMLDivElement> {
   /**
-   * Título exibido no card.
+   * Title displayed in the card.
    */
   title: string;
 
   /**
-   * Subtítulo exibido abaixo do título.
+   * Subtitle displayed below the title.
    */
   subtitle: string;
 
   /**
-   * URL da imagem de fundo (alternativa ao gradiente).
+   * Background image URL (alternative to gradient).
    */
   backgroundImage?: string;
 
   /**
-   * Gradiente CSS de fundo (usado quando não há backgroundImage).
+   * CSS gradient background (used when backgroundImage is not provided).
    */
   gradient?: string;
 
   /**
-   * Se `true`, exibe o landmark no canto inferior direito.
+   * If `true`, shows the landmark in the bottom-right corner.
    * @default false
    */
   showLandmark?: boolean;
 
   /**
-   * Texto alternativo para a imagem de fundo.
+   * Alternative text for the background image.
    */
   alt?: string;
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

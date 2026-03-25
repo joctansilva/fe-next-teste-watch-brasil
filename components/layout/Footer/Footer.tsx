@@ -4,12 +4,12 @@ import { socialMedia } from "@/data/social-media";
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-white/10 bg-secondary text-neutral-300">
+    <footer className="w-full border-t border-white/10 bg-secondary text-neutral-300" aria-label="Site footer">
       <div className="mx-auto max-w-480 px-6 py-12 md:px-14">
         <div className="flex flex-col gap-6 md:grid md:gap-10 md:grid-cols-2 lg:grid-cols-[3fr_1fr]">
-          {/* Coluna Esquerda - Legal, Social, Links */}
+          {/* Left Column - Legal, Social, Links */}
           <div className="contents md:block">
-            {/* Texto Legal */}
+            {/* Legal Text */}
             <Text
               variant="small"
               className="order-1 leading-relaxed text-neutral-400 md:order-0"
@@ -31,7 +31,7 @@ export function Footer() {
               2024 Paramount. All rights reserved.{" "}
             </Text>
 
-            {/* Ícones Sociais */}
+            {/* Social Icons */}
             <div className="order-4 mt-0 flex h-10 items-center justify-center gap-8 text-neutral-400 md:order-0 md:mt-6 md:justify-start">
               {socialMedia.map((social) =>
                 social.url ? (
@@ -53,19 +53,19 @@ export function Footer() {
               )}
             </div>
 
-            {/* Links do Rodapé */}
+            {/* Footer Links */}
             <div className="order-6 mt-0 flex flex-wrap justify-center gap-6 text-sm md:order-0 md:mt-8 md:justify-start">
-              <a className="cursor-pointer">About Labs Festival</a>
-              <a className="cursor-pointer">Terms of use and privacy</a>
-              <a className="cursor-pointer">Send feedback</a>
+              <button className="cursor-pointer hover:text-primary transition-colors">About Labs Festival</button>
+              <button className="cursor-pointer hover:text-primary transition-colors">Terms of use and privacy</button>
+              <button className="cursor-pointer hover:text-primary transition-colors">Send feedback</button>
             </div>
           </div>
 
-          {/* Coluna Direita - Logo, Copyright, Lojas */}
+          {/* Right Column - Logo, Copyright, App Stores */}
           <div className="contents md:flex md:flex-col md:items-start md:gap-6 lg:items-end">
             {/* Logo */}
             <div className="order-2 flex justify-center md:order-0 md:justify-start lg:justify-end">
-              <Image src="/logo.svg" width={160} height={10} alt="img" />
+              <Image src="/logo.svg" width={160} height={10} alt="Watch Brasil" />
             </div>
 
             {/* Copyright */}
@@ -76,10 +76,10 @@ export function Footer() {
               © 2024 Watch Brasil. All rights reserved{" "}
             </Text>
 
-            {/* Lojas de Aplicativos */}
+            {/* App Stores */}
             <div className="order-5 flex justify-center gap-4 md:order-0 md:justify-start lg:justify-end">
-              <Image src="/gplay.png" width={135} height={10} alt="img" />
-              <Image src="/applestore.png" width={135} height={10} alt="img" />
+              <Image src="/gplay.png" width={135} height={10} alt="Available on Google Play" />
+              <Image src="/applestore.png" width={135} height={10} alt="Available on the App Store" />
             </div>
           </div>
         </div>

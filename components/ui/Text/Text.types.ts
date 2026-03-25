@@ -7,24 +7,24 @@ import type { textVariants } from "./Text.variants";
  */
 export type TextProps<T extends ElementType = "p"> = {
   /**
-   * O elemento HTML a ser renderizado.
-   * Se não fornecido, usa o elemento padrão da variante.
+   * The HTML element to render.
+   * If not provided, uses the variant's default element.
    */
   as?: T;
 
   /**
-   * A variante de tipografia a ser utilizada.
+   * The typography variant to use.
    * @default paragraph
    */
   variant?: VariantProps<typeof textVariants>["variant"];
 
   /**
-   * O conteúdo do componente.
+   * The component content.
    */
   children?: React.ReactNode;
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 } & ComponentPropsWithoutRef<T>;

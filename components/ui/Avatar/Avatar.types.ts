@@ -1,20 +1,20 @@
 export interface AvatarProps {
   /**
-   * Tamanho do avatar
+   * Avatar size.
    * @default "md"
    */
   size?: "sm" | "md" | "lg";
   /**
-   * Exibir nome do usuário ao lado do avatar
+   * Whether to show the user name beside the avatar.
    * @default false
    */
   showName?: boolean;
   /**
-   * Nome do usuário
+   * The user name.
    */
   userName?: string;
   /**
-   * Classes CSS adicionais
+   * Additional CSS classes.
    */
   className?: string;
 }

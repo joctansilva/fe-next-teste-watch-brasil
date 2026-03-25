@@ -24,11 +24,15 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(cardVariants({ shape }), className)}
-        style={{ backgroundImage: `url(${image})` }}
-        role="img"
-        aria-label={alt || footerText}
         {...props}
       >
+        <Image
+          src={image}
+          alt={alt || footerText}
+          fill
+          className="object-cover object-center"
+          sizes="(max-width: 768px) 208px, 208px"
+        />
         <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
 
         <div className="relative flex h-full flex-col p-4 pb-12">

@@ -5,22 +5,22 @@ import type { HTMLAttributes } from "react";
  */
 export interface PaginationProps extends HTMLAttributes<HTMLDivElement> {
   /**
-   * Número total de slides/páginas.
+   * Total number of slides/pages.
    */
   totalSlides: number;
 
   /**
-   * Índice do slide/página atual (0-based).
+   * Index of the current slide/page (0-based).
    */
   currentSlide: number;
 
   /**
-   * Callback executado ao clicar em um dot.
+   * Callback fired when a dot is clicked.
    */
   onSlideChange: (index: number) => void;
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

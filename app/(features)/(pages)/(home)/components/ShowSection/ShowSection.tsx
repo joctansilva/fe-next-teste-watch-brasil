@@ -1,3 +1,5 @@
+"use client";
+
 import { Text, Card, CardAds, Carousel } from "@/components/ui";
 
 import { useInterleaveAds } from "@/hooks/useInterleaveAds";
@@ -28,7 +30,7 @@ export function ShowSection({
   return (
     <section className="space-y-4">
       <Text variant="title">{title}</Text>
-      <Carousel>
+      <Carousel aria-label={title}>
         {items.map((item) => {
           if (isAd(item)) {
             return (
@@ -49,8 +51,8 @@ export function ShowSection({
             <Card
               key={`show-${item.id}`}
               image={item.imgUrl}
-              footerText={item.nome}
-              alt={item.nome}
+              footerText={item.name}
+              alt={item.name}
               showWatchAgainLabel={showWatchAgainLabel}
               showLandmark={showLandmark && item.wasPlayed}
             />

@@ -25,14 +25,15 @@ export function HeroInfo({
         </Text>
         <div className="flex items-center gap-1.5 md:gap-3 text-white flex-wrap">
           {isLive && (
-            <div className="flex items-center gap-1.5">
-              <div className="relative flex h-2 w-2">
+            <div className="flex items-center gap-1.5" aria-label="Live broadcast">
+              <div className="relative flex h-2 w-2" aria-hidden="true">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
               </div>
               <Text
                 variant="small"
                 className="font-semibold uppercase text-xs md:text-sm"
+                aria-hidden="true"
               >
                 LIVE
               </Text>

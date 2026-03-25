@@ -7,7 +7,7 @@ interface VideoPlayerProps {
 export function VideoPlayer({ togglePlay }: VideoPlayerProps) {
   return (
     <>
-      {/* Vídeo de Fundo */}
+      {/* Background Video */}
       <div className="absolute inset-0 overflow-hidden">
         <div
           id="youtube-player"
@@ -24,14 +24,17 @@ export function VideoPlayer({ togglePlay }: VideoPlayerProps) {
         />
       </div>
 
-      {/* Pausar/Despausar video clicando na tela */}
+      {/* Click overlay to play/pause video */}
       <div
+        role="button"
+        tabIndex={0}
         onClick={togglePlay}
+        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && togglePlay()}
         className="absolute inset-0 cursor-pointer z-0"
-        aria-label="Play/Pause video"
+        aria-label="Play or pause video"
       />
 
-      {/* Overlay do vídeo */}
+      {/* Video overlay gradient */}
       <div
         className="absolute inset-0 pointer-events-none
                    bg-linear-to-b from-[#1E1E22] via-transparent via-10% to-[#1E1E22]

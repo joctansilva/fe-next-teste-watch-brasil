@@ -9,58 +9,58 @@ export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   /**
-   * O conteúdo do componente.
+   * The component content.
    */
   children?: ReactNode;
 
   /**
-   * Elemento posicionado antes ou depois do conteúdo.
+   * Element positioned before or after the content.
    */
   icon?: ReactNode;
 
   /**
-   * A posição do ícone.
+   * The icon position.
    * @default left
    */
   iconPosition?: "left" | "right";
 
   /**
-   * A variante a ser utilizada.
+   * The variant to use.
    * @default filled
    */
   variant?: VariantProps<typeof buttonVariants>["variant"];
 
   /**
-   * O tamanho do componente.
+   * The component size.
    * @default md
    */
   size?: VariantProps<typeof buttonVariants>["size"];
 
   /**
-   * O formato do botão, sendo quadrado ou arredondado.
+   * The button shape — square or rounded.
    * @default rounded
    */
   shape?: VariantProps<typeof buttonVariants>["shape"];
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 
   /**
-   * Se `true`, o componente fica desabilitado.
+   * If `true`, the component is disabled.
    * @default false
    */
   disabled?: boolean;
 
   /**
-   * O tipo do botão.
+   * The button type.
    * @default button
    */
   type?: "button" | "submit" | "reset";
 
   /**
-   * Label de acessibilidade para botões apenas com ícone.
+   * Accessibility label for icon-only buttons.
    */
   "aria-label"?: string;
 }

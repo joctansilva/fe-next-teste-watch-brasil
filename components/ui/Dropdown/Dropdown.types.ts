@@ -5,23 +5,23 @@ import type { ReactNode } from "react";
  */
 export interface DropdownProps {
   /**
-   * O conteúdo do dropdown.
+   * The dropdown content.
    */
   children: ReactNode;
 
   /**
-   * Se o dropdown está aberto.
+   * Whether the dropdown is open.
    */
   isOpen: boolean;
 
   /**
-   * Alinhamento do dropdown
+   * Dropdown alignment.
    * @default "left"
    */
   align?: "left" | "right";
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

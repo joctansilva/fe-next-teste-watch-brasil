@@ -29,13 +29,13 @@ export function useHero() {
   const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
-    // Carregar YouTube IFrame API
+    // Load YouTube IFrame API
     const tag = document.createElement("script");
     tag.src = "https://www.youtube.com/iframe_api";
     const firstScriptTag = document.getElementsByTagName("script")[0];
     firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
 
-    // Inicializar player quando API estiver pronta
+    // Initialize player when API is ready
     window.onYouTubeIframeAPIReady = () => {
       playerRef.current = new window.YT.Player("youtube-player", {
         videoId: "7UTsXY4QsQI",

@@ -41,18 +41,18 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
             aria-label={alt || artistName}
           />
 
-          {/* Age-rate sempre visível em mobile */}
+          {/* Age rating — always visible on mobile */}
           <div className="absolute bottom-2 left-2 md:hidden">
             <Image
               src="/age-rate.png"
-              alt="Classificação etária"
+              alt="Age rating"
               width={16}
               height={16}
               className="shrink-0"
             />
           </div>
 
-          {/* Overlay de hover apenas em desktop */}
+          {/* Hover overlay — desktop only */}
           <div className="absolute inset-x-0 bottom-0 h-32 opacity-0 transition-opacity duration-300 md:group-hover/card:opacity-100">
             <div
               className="absolute inset-0"
@@ -66,7 +66,7 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
               <div className="flex flex-row items-center gap-3">
                 <Image
                   src="/age-rate.png"
-                  alt="Classificação etária"
+                  alt="Age rating"
                   width={24}
                   height={24}
                   className="shrink-0"
@@ -83,7 +83,7 @@ export const LiveCard = forwardRef<HTMLDivElement, LiveCardProps>(
 
                 <button
                   className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gray-600 text-white transition-colors hover:bg-gray-500"
-                  aria-label="Adicionar à lista"
+                  aria-label="Add to list"
                 >
                   <Plus size={16} />
                 </button>

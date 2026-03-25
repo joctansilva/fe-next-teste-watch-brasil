@@ -8,7 +8,7 @@ import type { VariantProps } from "class-variance-authority";
 export const textVariants = cva("font-sans", {
   variants: {
     /**
-     * A variante de tipografia a ser utilizada.
+     * The typography variant to use.
      * @default paragraph
      */
     variant: {
@@ -26,7 +26,7 @@ export const textVariants = cva("font-sans", {
 });
 
 /**
- * Mapeamento de variantes para elementos HTML padrão
+ * Variant to default HTML element mapping
  */
 export const defaultElements: Record<
   NonNullable<VariantProps<typeof textVariants>["variant"]>,

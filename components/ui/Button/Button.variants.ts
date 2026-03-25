@@ -8,7 +8,7 @@ export const buttonVariants = cva(
   {
     variants: {
       /**
-       * A variante a ser utilizada.
+       * The variant to use.
        * @default filled
        */
       variant: {
@@ -19,7 +19,7 @@ export const buttonVariants = cva(
       },
 
       /**
-       * O tamanho do componente.
+       * The component size.
        * @default md
        */
       size: {
@@ -29,7 +29,7 @@ export const buttonVariants = cva(
       },
 
       /**
-       * O formato do botão, sendo quadrado ou arredondado.
+       * The button shape — square or rounded.
        * @default rounded
        */
       shape: {
@@ -58,7 +58,7 @@ export const buttonVariants = cva(
 export const iconVariants = cva("inline-flex items-center justify-center", {
   variants: {
     /**
-     * O tamanho do ícone.
+     * The icon size.
      * @default md
      */
     size: {

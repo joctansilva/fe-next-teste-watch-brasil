@@ -8,7 +8,7 @@ export const liveCardVariants = cva(
   {
     variants: {
       /**
-       * O formato do card, sendo quadrado ou arredondado.
+       * The card shape — square or rounded.
        * @default rounded
        */
       shape: {
@@ -17,7 +17,7 @@ export const liveCardVariants = cva(
       },
 
       /**
-       * O tamanho do card.
+       * The card size.
        * @default default
        */
       size: {

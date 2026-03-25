@@ -74,5 +74,5 @@ export const genres: Genre[] = [
   },
 ];
 
-// Helper para filtrar gêneros assistidos
+// Helper to filter watched genres
 export const getWatchedGenres = () => genres.filter((genre) => genre.wasPlayed);

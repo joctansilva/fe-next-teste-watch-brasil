@@ -8,6 +8,7 @@ export function Carousel({
   children,
   className,
   showControls = false,
+  "aria-label": ariaLabel,
 }: CarouselProps) {
   const {
     carouselRef,
@@ -20,7 +21,7 @@ export function Carousel({
   } = useCarousel();
 
   return (
-    <div className="relative group">
+    <div className="relative group" role="region" aria-label={ariaLabel ?? "Content carousel"}>
       {showControls && (
         <>
           <button

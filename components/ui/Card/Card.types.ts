@@ -9,40 +9,40 @@ export interface CardProps
   extends Omit<HTMLAttributes<HTMLDivElement>, "title">,
     VariantProps<typeof cardVariants> {
   /**
-   * URL da imagem de fundo.
+   * The background image URL.
    */
   image: string;
 
   /**
-   * Texto exibido no rodapé do card.
+   * Text displayed in the card footer.
    */
   footerText: string;
 
   /**
-   * Texto alternativo para a imagem.
+   * Alternative text for the image.
    */
   alt?: string;
 
   /**
-   * Se `true`, exibe o landmark no canto inferior direito.
+   * If `true`, shows the landmark in the bottom-right corner.
    * @default false
    */
   showLandmark?: boolean;
 
   /**
-   * Se `true`, exibe o label "Watch Again" no topo.
+   * If `true`, shows the "Watch Again" label at the top.
    * @default false
    */
   showWatchAgainLabel?: boolean;
 
   /**
-   * O formato do card, sendo quadrado ou arredondado.
+   * The card shape — square or rounded.
    * @default rounded
    */
   shape?: VariantProps<typeof cardVariants>["shape"];
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

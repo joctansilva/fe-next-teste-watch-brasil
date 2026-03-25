@@ -3,16 +3,16 @@ import type { VariantProps } from "class-variance-authority";
 import type { badgeVariants } from "./Badge.variants";
 
 /**
- * Interface de Props para ícones Lucide
+ * Lucide icon props interface
  */
 export interface IconProps {
   /**
-   * O tamanho do ícone.
+   * The icon size.
    */
   size?: number;
 
   /**
-   * A espessura do traço do ícone.
+   * The icon stroke width.
    */
   strokeWidth?: number;
 }
@@ -24,40 +24,40 @@ export interface BadgeProps
   extends Omit<HTMLAttributes<HTMLSpanElement>, "children">,
     VariantProps<typeof badgeVariants> {
   /**
-   * O conteúdo do componente.
+   * The component content.
    */
   children?: ReactNode;
 
   /**
-   * Elemento posicionado antes do conteúdo.
+   * Element positioned before the content.
    */
   iconLeft?: ReactNode;
 
   /**
-   * Elemento posicionado depois do conteúdo.
+   * Element positioned after the content.
    */
   iconRight?: ReactNode;
 
   /**
-   * A variante a ser utilizada.
+   * The variant to use.
    * @default primary
    */
   variant?: VariantProps<typeof badgeVariants>["variant"];
 
   /**
-   * O tamanho do componente.
+   * The component size.
    * @default md
    */
   size?: VariantProps<typeof badgeVariants>["size"];
 
   /**
-   * O formato do badge, sendo quadrado ou arredondado.
+   * The badge shape — square or rounded.
    * @default rounded
    */
   shape?: VariantProps<typeof badgeVariants>["shape"];
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

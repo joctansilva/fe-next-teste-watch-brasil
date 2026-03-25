@@ -22,52 +22,67 @@ export function MobileMenu({ menuItems }: MobileMenuProps) {
     setOpenDropdown(openDropdown === label ? null : label);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Escape") setIsOpen(false);
+  };
+
   return (
     <>
-      {/* Botão Menu Hamburguer */}
+      {/* Hamburger Menu Button */}
       <button
         onClick={() => setIsOpen(true)}
         className="md:hidden flex items-center justify-center text-white hover:text-primary transition-colors"
-        aria-label="Abrir menu"
+        aria-label="Open navigation menu"
+        aria-expanded={isOpen}
+        aria-controls="mobile-menu-drawer"
+        aria-haspopup="dialog"
       >
         <Menu size={24} strokeWidth={2} />
       </button>
 
-      {/* Fundo Escuro */}
+      {/* Dark Overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-50 md:hidden"
           onClick={() => setIsOpen(false)}
+          aria-hidden="true"
         />
       )}
 
       {/* Drawer */}
       <div
+        id="mobile-menu-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation menu"
+        onKeyDown={handleKeyDown}
         className={cn(
           "fixed top-0 right-0 h-full w-[280px] bg-secondary z-50 transform transition-transform duration-300 ease-in-out md:hidden",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        {/* Cabeçalho do Drawer */}
+        {/* Drawer Header */}
         <div className="flex items-center justify-between p-6 border-b border-tertiary">
           <span className="text-white text-lg font-medium">Menu</span>
           <button
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-center text-white hover:text-primary transition-colors"
-            aria-label="Fechar menu"
+            aria-label="Close navigation menu"
           >
             <X size={24} strokeWidth={2} />
           </button>
         </div>
 
         {/* Itens do Menu */}
-        <nav className="flex flex-col p-4 overflow-y-auto h-[calc(100%-80px)]">
+        <nav className="flex flex-col p-4 overflow-y-auto h-[calc(100%-80px)]" aria-label="Mobile navigation">
           {menuItems.map((item) => (
             <div key={item.label}>
               {item.dropdown ? (
                 <div>
                   <button
                     onClick={() => toggleDropdown(item.label)}
+                    aria-expanded={openDropdown === item.label}
+                    aria-haspopup="true"
                     className="flex items-center justify-between w-full px-4 py-3 text-white text-base font-medium hover:text-primary transition-colors"
                   >
                     <div className="flex items-center gap-3">
@@ -110,10 +125,10 @@ export function MobileMenu({ menuItems }: MobileMenuProps) {
             </div>
           ))}
 
-          {/* Divisor */}
+          {/* Divider */}
           <div className="my-4 border-t border-tertiary" />
 
-          {/* Links de Configurações */}
+          {/* Settings Links */}
           <Link
             href="/profile"
             onClick={() => setIsOpen(false)}

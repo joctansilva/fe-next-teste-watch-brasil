@@ -9,50 +9,50 @@ export interface LiveCardProps
   extends Omit<HTMLAttributes<HTMLDivElement>, "title">,
     VariantProps<typeof liveCardVariants> {
   /**
-   * URL da imagem de fundo.
+   * The background image URL.
    */
   image: string;
 
   /**
-   * Nome do artista.
+   * The artist name.
    */
   artistName: string;
 
   /**
-   * Nome do palco.
+   * The stage name.
    */
   stageName: string;
 
   /**
-   * Data e hora formatadas.
+   * Formatted date and time.
    */
   dateTime: string;
 
   /**
-   * Se `true`, exibe o indicador de transmissão ao vivo.
+   * If `true`, shows the live broadcast indicator.
    * @default true
    */
   isLive?: boolean;
 
   /**
-   * Texto alternativo para a imagem.
+   * Alternative text for the image.
    */
   alt?: string;
 
   /**
-   * O formato do card, sendo quadrado ou arredondado.
+   * The card shape — square or rounded.
    * @default rounded
    */
   shape?: VariantProps<typeof liveCardVariants>["shape"];
 
   /**
-   * O tamanho do card.
+   * The card size.
    * @default default
    */
   size?: VariantProps<typeof liveCardVariants>["size"];
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

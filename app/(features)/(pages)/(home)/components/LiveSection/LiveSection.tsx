@@ -1,12 +1,17 @@
 import { Text, LiveCard, Carousel } from "@/components/ui";
-import { inLiveShows } from "@/data/in-live";
+import type { SanityInLiveShow } from "@/lib/sanity/types";
 
-export function LiveSection() {
+interface LiveSectionProps {
+  title: string;
+  liveShows: SanityInLiveShow[];
+}
+
+export function LiveSection({ title, liveShows }: LiveSectionProps) {
   return (
     <section className="space-y-4">
-      <Text variant="title">In Live</Text>
-      <Carousel>
-        {inLiveShows.map((show) => (
+      <Text variant="title">{title}</Text>
+      <Carousel aria-label="Live shows">
+        {liveShows.map((show) => (
           <LiveCard
             key={show.id}
             image={show.image}

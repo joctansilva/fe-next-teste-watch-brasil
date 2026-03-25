@@ -26,11 +26,18 @@ export function CtaBanner({
         "relative w-full aspect-[3/2] overflow-hidden bg-white md:aspect-1328/400",
         className,
       )}
+      role="region"
+      aria-label="Promotional banner"
     >
-      <div className="relative h-full w-full">
+      <div
+        className="relative h-full w-full"
+        aria-live="polite"
+        aria-atomic="true"
+      >
         {slides.map((slide, index) => (
           <div
             key={index}
+            aria-hidden={currentSlide !== index}
             className={cn(
               "absolute inset-4 bottom-12 transition-opacity duration-500 md:inset-8 md:bottom-10 lg:bottom-10",
               currentSlide === index ? "opacity-100" : "opacity-0",
@@ -51,6 +58,8 @@ export function CtaBanner({
       {slides.map((slide, index) => (
         <button
           key={`btn-${index}`}
+          aria-label={`${slide.buttonText} — slide ${index + 1} de ${slides.length}`}
+          tabIndex={currentSlide === index ? 0 : -1}
           className={cn(
             "absolute bottom-14 left-1/2 -translate-x-1/2 rounded px-4 py-1 text-sm font-extrabold text-white transition-opacity duration-500 flex flex-row gap-1.5 items-center cursor-pointer",
             "md:left-auto md:right-[48px] md:bottom-[64px] md:translate-x-0 md:px-8 md:py-1.5 md:text-lg md:gap-2.5",

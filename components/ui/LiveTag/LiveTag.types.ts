@@ -5,13 +5,13 @@ import type { HTMLAttributes } from "react";
  */
 export interface LiveTagProps extends HTMLAttributes<HTMLDivElement> {
   /**
-   * Texto exibido na tag.
+   * Text displayed in the tag.
    * @default Live
    */
   text?: string;
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

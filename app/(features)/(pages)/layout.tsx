@@ -1,9 +1,5 @@
 import { ReactNode } from "react";
 
 export default function MarketingLayout({ children }: { children: ReactNode }) {
-  return (
-    <div className="min-h-screen bg-background">
-      <main>{children}</main>
-    </div>
-  );
+  return <div className="min-h-screen bg-background">{children}</div>;
 }

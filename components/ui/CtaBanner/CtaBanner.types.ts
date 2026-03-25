@@ -5,24 +5,24 @@ import type { BannerSlide } from "@/data/banners";
  */
 export interface CtaBannerProps {
   /**
-   * Array de slides a serem exibidos.
+   * Array of slides to display.
    */
   slides: BannerSlide[];
 
   /**
-   * Se `true`, avança automaticamente os slides.
+   * If `true`, slides advance automatically.
    * @default true
    */
   autoPlay?: boolean;
 
   /**
-   * Intervalo em milissegundos entre os slides.
+   * Interval in milliseconds between slides.
    * @default 5000
    */
   autoPlayInterval?: number;
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

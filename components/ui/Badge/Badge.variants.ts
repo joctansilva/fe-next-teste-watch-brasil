@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 /**
- * Mapeamento de tamanhos de ícone por tamanho do badge
+ * Icon size mapping by badge size
  */
 export const iconSizes = {
   sm: 10,
@@ -17,7 +17,7 @@ export const badgeVariants = cva(
   {
     variants: {
       /**
-       * A variante a ser utilizada.
+       * The variant to use.
        * @default primary
        */
       variant: {
@@ -26,7 +26,7 @@ export const badgeVariants = cva(
       },
 
       /**
-       * O tamanho do componente.
+       * The component size.
        * @default md
        */
       size: {
@@ -36,7 +36,7 @@ export const badgeVariants = cva(
       },
 
       /**
-       * O formato do badge, sendo quadrado ou arredondado.
+       * The badge shape — square or rounded.
        * @default rounded
        */
       shape: {

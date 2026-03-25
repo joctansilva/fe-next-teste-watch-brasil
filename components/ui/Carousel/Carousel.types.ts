@@ -5,18 +5,23 @@ import type { ReactNode } from "react";
  */
 export interface CarouselProps {
   /**
-   * Elementos filhos a serem exibidos no carousel.
+   * Child elements to display in the carousel.
    */
   children: ReactNode;
 
   /**
-   * Se `true`, exibe os botões de navegação no hover.
+   * If `true`, shows navigation buttons on hover.
    * @default false
    */
   showControls?: boolean;
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
+
+  /**
+   * Accessible label for the carousel (WCAG 2.4.1).
+   */
+  "aria-label"?: string;
 }

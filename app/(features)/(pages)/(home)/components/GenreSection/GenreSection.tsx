@@ -1,12 +1,20 @@
+"use client";
+
 import { Text, CardAds, Button, GenreCard, Carousel } from "@/components/ui";
 
 import { ads } from "@/data/ads";
-import { genres } from "@/data/genres";
 import { useInterleaveAds } from "@/hooks/useInterleaveAds";
 import { isAd } from "@/lib/typeGuards";
 import { getBadgeIcon, getButtonIcon } from "@/lib/getAdIcon";
+import type { SanityGenre } from "@/lib/sanity/types";
 
-export function Genre() {
+interface GenreProps {
+  title: string;
+  description: string;
+  genres: SanityGenre[];
+}
+
+export function Genre({ title, description, genres }: GenreProps) {
   const genreItens = useInterleaveAds(genres, ads[2], 2);
 
   return (
@@ -15,14 +23,14 @@ export function Genre() {
       <div className="flex flex-col gap-4 md:hidden">
         <div className="flex items-center justify-between">
           <Text variant="subtitle" as="h2">
-            Festival for you
+            {title}
           </Text>
           <Button variant="filled" size="md" shape="rounded">
             See All
           </Button>
         </div>
         <Text variant="nano" className="text-white/80 text-xs">
-          Explore your favorite genres and discover new rhythms to love!
+          {description}
         </Text>
           <Carousel>
             {genreItens.map((item) => {
@@ -58,13 +66,13 @@ export function Genre() {
       <div className="hidden md:flex items-center gap-8">
         <div className="relative z-10 flex shrink-0 flex-col justify-center gap-4 bg-background pr-8 h-52">
           <Text variant="subtitle" as="h2">
-            Festival for you
+            {title}
           </Text>
           <Text
             variant="paragraph"
             className="max-w-xs text-white/80 w-44.5 text-sm"
           >
-            Explore your favorite genres and discover new rhythms to love!
+            {description}
           </Text>
           <div>
             <Button variant="filled" size="md" shape="rounded">

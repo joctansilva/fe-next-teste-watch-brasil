@@ -11,7 +11,7 @@ export function useInterleaveAds<T>(
 
     const result: Array<T | Ad> = [...items];
 
-    // Insere o ad na posição especificada
+    // Insert the ad at the specified position
     if (position >= 0 && position <= items.length) {
       result.splice(position, 0, ad);
     }

@@ -1,7 +1,7 @@
 import type { Ad } from "@/data/ads";
 
 /**
- * Type guard para verificar se um item é um Ad
+ * Type guard to check if an item is an Ad
  */
 export function isAd(item: unknown): item is Ad {
   return (

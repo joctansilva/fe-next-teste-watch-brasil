@@ -6,18 +6,18 @@ import type { HTMLAttributes } from "react";
 export interface IconProps
   extends Omit<HTMLAttributes<HTMLDivElement>, "children"> {
   /**
-   * Nome do ícone (nome do arquivo SVG sem extensão).
+   * Icon name (SVG filename without extension).
    */
   name: string;
 
   /**
-   * Tamanho do ícone em pixels.
+   * Icon size in pixels.
    * @default 24
    */
   size?: number;
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

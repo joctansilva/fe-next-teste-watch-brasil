@@ -4,18 +4,18 @@ import { useState, useEffect } from "react";
 
 export interface UseCtaBannerProps {
   /**
-   * Número total de slides.
+   * Total number of slides.
    */
   slidesCount: number;
 
   /**
-   * Se `true`, avança automaticamente os slides.
+   * If `true`, slides advance automatically.
    * @default true
    */
   autoPlay?: boolean;
 
   /**
-   * Intervalo em milissegundos entre os slides.
+   * Interval in milliseconds between slides.
    * @default 5000
    */
   autoPlayInterval?: number;

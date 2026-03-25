@@ -5,27 +5,27 @@ import type { HTMLAttributes, ReactNode } from "react";
  */
 export interface LogoProps {
   /**
-   * URL da imagem do logo.
+   * The logo image URL.
    */
   src: string;
 
   /**
-   * Texto alternativo do logo.
+   * Alternative text for the logo.
    */
   alt: string;
 
   /**
-   * Largura do logo em pixels.
+   * Logo width in pixels.
    */
   width: number;
 
   /**
-   * Altura do logo em pixels.
+   * Logo height in pixels.
    */
   height: number;
 
   /**
-   * Classes CSS adicionais para o logo.
+   * Additional CSS classes for the logo.
    */
   className?: string;
 }
@@ -35,58 +35,58 @@ export interface LogoProps {
  */
 export interface CardAdsProps extends HTMLAttributes<HTMLDivElement> {
   /**
-   * URL da imagem de fundo.
+   * The background image URL.
    */
   image: string;
 
   /**
-   * Texto alternativo para a imagem.
+   * Alternative text for the image.
    */
   alt: string;
 
   /**
-   * Texto exibido no badge.
+   * Text displayed in the badge.
    */
   badgeText: string;
 
   /**
-   * Ícone exibido no badge.
+   * Icon displayed in the badge.
    */
   badgeIcon?: ReactNode;
 
   /**
-   * Texto exibido no botão.
+   * Text displayed in the button.
    */
   buttonText: string;
 
   /**
-   * Ícone exibido no botão.
+   * Icon displayed in the button.
    */
   buttonIcon?: ReactNode;
 
   /**
-   * Classes CSS adicionais para o botão.
+   * Additional CSS classes for the button.
    */
   buttonClassName?: string;
 
   /**
-   * Callback executado ao clicar no botão.
+   * Callback fired when the button is clicked.
    */
   onButtonClick?: () => void;
 
   /**
-   * Configurações do logo.
+   * Logo configuration.
    */
   logo?: LogoProps;
 
   /**
-   * Se `true`, a imagem é carregada com prioridade.
+   * If `true`, the image is loaded with priority.
    * @default false
    */
   priority?: boolean;
 
   /**
-   * Classes CSS adicionais.
+   * Additional CSS classes.
    */
   className?: string;
 }

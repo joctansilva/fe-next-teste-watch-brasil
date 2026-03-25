@@ -1,6 +1,6 @@
 /**
- * Componentes UI - Design System Base
- * Exportação centralizada dos componentes primitivos reutilizáveis
+ * UI Components - Base Design System
+ * Centralized barrel export for all reusable primitive components
  */
 export { Button } from "./Button";
 export type { ButtonProps } from "./Button";

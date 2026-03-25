@@ -1,6 +1,6 @@
 export interface Show {
   id: string;
-  nome: string;
+  name: string;
   startDate: string;
   genre: string;
   wasPlayed: boolean;
