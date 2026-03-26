@@ -33,8 +33,8 @@ export function LineUp() {
             <Card
               key={`show-${item.id}`}
               image={item.imgUrl}
-              footerText={item.nome}
-              alt={item.nome}
+              footerText={item.name}
+              alt={item.name}
             />
           );
         })}
