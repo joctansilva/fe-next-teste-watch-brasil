@@ -1,4 +1,4 @@
-import { groq } from "@sanity/client";
+import groq from "groq";
 
 export const showsQuery = groq`
   *[_type == "show"] | order(order asc) {
