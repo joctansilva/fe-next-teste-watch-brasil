@@ -10,7 +10,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8)](https://tailwindcss.com/)
 
-[Ver Demo](https://fe-next-teste-watch-brasil-ismaqk6pk.vercel.app)
+[Ver Demo](https://fe-next-teste-watch-brasil.vercel.app)
 
 </div>
 
